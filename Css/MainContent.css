@@ -1,0 +1,352 @@
+.main {
+    margin-top: 60px;
+    padding-bottom: 80px;
+    background-color: #fff;
+    position: relative;
+}
+
+.study-main {
+    background-color: #fafbfc;
+    display: flex;
+}
+
+.study-main-contents {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.study-main-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header-r {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 25px;
+    font-weight: 700;
+    font-family: notoBold;
+    color: black;
+}
+
+.main-subTitle {
+    font-size: 12px;
+    font-weight: 100;
+    color: #737373;
+    padding-top: 10px;
+}
+
+.study-main-body {
+    margin-top: 10px;
+}
+
+.study-main-item-list-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.study-main-item-list:nth-of-type(5n-4) {
+    margin-left: 0;
+}
+
+.study-main-item-list {
+    width: calc(20% - 16px);
+    height: auto;
+    border-radius: 6px;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.study-item-img-wrap {
+    flex: 1;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.study-item-img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    transition: .2s ease-out;
+}
+
+.study-item-info-cover {
+    width: 100%;
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    right: 20px;
+    bottom: 20px;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
+.study-item-txt-wrap {
+    padding: 14px 0;
+}
+
+.study-item-txt-title{
+    font-size: 17px;
+    font-weight: 300;
+    color: black;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 20px;
+}
+
+.study-item-txt-subTitle {
+    font-size: 6px;
+    color: #A1A1A1;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main-goStudy {
+    background-color: white;
+    font-size: 17px;
+    color: #292929;
+    float: right;
+}
+
+/**공모전**/
+
+.contest-main {
+    background-color: #fafbfc;
+    display: flex;
+}
+
+.contest-main-contents {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contest-main-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contest-main-body {
+    margin-top: 10px;
+}
+
+.main-item-list-wrap {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    border: 1px solid #cecece;
+}
+
+.main-item-list {
+    width: 100%;
+    border-bottom: 1px solid #cecece;
+}
+
+.main-item-list:last-of-type {
+    border: none;
+}
+
+.main-item {
+    display: block;
+    margin: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-item-head {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-item-title {
+    font-size: 17px;
+    font-weight: 300;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 20px;
+}
+
+.main-item-subtitle {
+    font-size: 6px;
+    color: #A1A1A1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 4px;
+}
+
+.main-item-day {
+    font-size: 17px;
+    color: #071648;
+}
+
+/**품앗이**/
+
+.classmate-main {
+    background-color: #fafbfc;
+    display: flex;
+}
+
+.classmate-main-contents {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.classmate-main-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.classmate-main-body {
+    margin-top: 10px;
+}
+
+
+@media (max-width: 1919px) {
+    .study-main {
+        padding: 50px 20px;
+    }
+
+    .contest-main {
+        padding: 0 20px;
+        padding-bottom: 50px;
+    }
+
+    .classmate-main {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .study-main-item-list {
+        width: calc(25% - 18px);
+        margin: 10px;
+    }
+
+    .study-item-img {
+        height: 180px;
+    }
+
+    .study-main-item-list:nth-of-type(4n-3) {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 959px) {
+    .study-main-item-list {
+        width: calc(33.33333% - 17px);
+    }
+
+    .study-main-item-list:nth-of-type(3n-2) {
+        margin-left: 0;
+    }
+
+    .main {
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+
+    .main-goStudy {
+        background-color: #FAFAFA;
+    }
+
+    .main-header-l {
+        align-items: center;
+    }
+
+    .main-item-list-wrap {
+        border: none;
+    }
+
+    .main-item-list:first-of-type {
+        border-top: 1px solid #cecece;
+    }
+
+    .main-item-list:last-of-type {
+        border-bottom: 1px solid #cecece;
+    }
+
+    .study-main {
+        padding: 50px 20px;
+    }
+
+    .contest-main {
+        padding: 0;
+        padding-bottom: 50px;
+    }
+
+    .contest-main-header {
+        margin: 0 10px;
+    }
+
+    .main-item-head {
+        width: 300px;
+    }
+
+    .classmate-main {
+        padding: 0;
+    }
+
+    .classmate-main-header {
+        margin: 0 10px;
+    }
+}
+
+@media(max-width: 699px) {
+    .nav-list {
+        width: calc(33.33333% - 10px);
+        transform: scale(0.8);
+    }
+
+    .nav-list a {
+        width: auto;
+    }
+
+}
+
+@media(max-width: 359px) {
+
+    .main-item-head {
+        width: 220px;
+    }
+
+    .logo-subtitle {
+        font-size: 9px;
+    }
+}

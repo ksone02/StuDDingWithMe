@@ -1,0 +1,50 @@
+@font-face {
+    font-family: notoBold;
+    src: url('../Font/NotoSansKR-Bold.otf');
+}
+@font-face {
+    font-family: notoMedium;
+    src: url('../Font/NotoSansKR-Medium.otf');
+}
+@font-face {
+    font-family: notoRegular;
+    src: url('../Font/NotoSansKR-Regular.otf');
+}
+
+* {
+    margin: 0;
+    font-family: notoRegular;
+    line-height: 1;
+}
+
+body {
+    background-color: white;
+    max-width: 100%;
+}
+
+button, a {
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input {
+    outline: 0;
+    font-weight: 400;
+}
+
+ul {
+    padding-inline-start: 0;
+    list-style: none;
+}
+
+ol {
+    list-style-type: none;
+}
+
+@media (max-width: 959px) {
+    body {
+        background-color: #FAFAFA;
+    }
+}

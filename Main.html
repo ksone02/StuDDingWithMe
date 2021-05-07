@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>스터띵윗미 - 명지대 매칭 플랫폼</title>
+    <meta name="description" content="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,0, maximum-scale=1, minimum-scale=1"
+    />
+    <link rel="icon" href="Img/favicon.ico" />
+    <link rel="stylesheet" href="Css/Main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="Js/sammy.js"></script>
+    <script src="Js/app.js"></script>
+  </head>
+  <body>
+    <script src="" async defer></script>
+    <header>
+      <link rel="stylesheet" href="Css/Header.css" />
+      <div class="header-contents">
+        <div class="nav-wrap">
+          <div class="nav-logo-wrap">
+            <div class="nav-left">
+              <img src="Img/logo_mj.png" alt="logo-mj" class="logo-mjCircle" />
+              <div class="logo-title-mobile">
+                <a
+                  href="http://175.126.26.219:30/"
+                  class="logo-stuDDingWithMe"
+                ></a>
+                <h4 class="logo-subtitle">M.C.C 매칭서비스 프로젝트</h4>
+              </div>
+            </div>
+            <a href="" class="logo-login-mobile">로그인</a>
+          </div>
+          <nav class="nav">
+            <ul class="nav-list-wrap">
+              <li class="nav-list">
+                <a href="http://175.126.26.219:30/study">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="55"
+                    height="55"
+                    viewBox="0 0 55 55"
+                    class="mobile-menu-icon"
+                  >
+                    <g id="pencil" transform="translate(-2.247 -2.25)">
+                      <path
+                        id="패스_1"
+                        data-name="패스 1"
+                        d="M42.687,3.4a3.928,3.928,0,0,1,5.554,0L56.1,11.257a3.929,3.929,0,0,1,0,5.554L20.742,52.168a3.928,3.928,0,0,1-1.533.95L7.424,57.047a3.928,3.928,0,0,1-4.974-4.969L6.378,40.292a3.929,3.929,0,0,1,.95-1.537L42.683,3.4Zm2.778,2.778,7.857,7.857L17.966,49.392,6.181,53.321l3.928-11.786Z"
+                        transform="translate(0 0)"
+                        fill="#071648"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="패스_2"
+                        data-name="패스 2"
+                        d="M49.139,21.946,37.553,10.359l3.281-3.281L52.421,18.665l-3.277,3.281ZM6.75,38.846v2.317A2.317,2.317,0,0,0,9.067,43.48h2.317V45.8A2.317,2.317,0,0,0,13.7,48.115h2.317v2.317a2.317,2.317,0,0,0,2.317,2.317h2.317V45.8a2.317,2.317,0,0,0-2.317-2.317H16.019V41.163A2.317,2.317,0,0,0,13.7,38.846Z"
+                        transform="translate(0 0)"
+                        fill="#071648"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                  </svg>
+                  <h2 class="nav-btn">스터디</h2>
+                </a>
+              </li>
+              <li class="nav-list">
+                <a href="http://175.126.26.219:30/contest">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="55"
+                    height="55"
+                    viewBox="0 0 55 55"
+                    class="mobile-menu-icon"
+                  >
+                    <g id="newspaper" transform="translate(0 -1.125)">
+                      <path
+                        id="패스_3"
+                        data-name="패스 3"
+                        d="M0,6.625a5.456,5.456,0,0,1,5.411-5.5H45.089a5.456,5.456,0,0,1,5.411,5.5v44a5.456,5.456,0,0,1-5.411,5.5H5.411A5.456,5.456,0,0,1,0,50.625ZM5.411,4.792a1.819,1.819,0,0,0-1.8,1.833v44a1.819,1.819,0,0,0,1.8,1.833H45.089a1.819,1.819,0,0,0,1.8-1.833v-44a1.819,1.819,0,0,0-1.8-1.833Z"
+                        fill="#071648"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="패스_4"
+                        data-name="패스 4"
+                        d="M34.875,6.75A1.125,1.125,0,0,1,36,7.875V31.5a3.375,3.375,0,0,1-3.375,3.375h-6.75v-2.25h6.75A1.125,1.125,0,0,0,33.75,31.5V7.875A1.125,1.125,0,0,1,34.875,6.75Z"
+                        transform="translate(19 21.25)"
+                        fill="#071648"
+                        fill-rule="evenodd"
+                      />
+                      <path
+                        id="패스_5"
+                        data-name="패스 5"
+                        d="M4.5,6.75H27V15.5H4.5Zm0,13.125h9V33h-9Zm0,17.5h9V41.75h-9Zm0,8.75h9V50.5h-9Zm11.25-26.25h4.5V24.25h-4.5Zm6.75,0H27V24.25H22.5Zm-6.75,8.75h4.5V33h-4.5Zm6.75,0H27V33H22.5Zm-6.75,8.75h4.5V41.75h-4.5Zm6.75,0H27V41.75H22.5Zm-6.75,8.75h4.5V50.5h-4.5Zm6.75,0H27V50.5H22.5Z"
+                        transform="translate(0 0)"
+                        fill="#071648"
+                      />
+                    </g>
+                  </svg>
+                  <h2 class="nav-btn">공모전</h2>
+                </a>
+              </li>
+              <li class="nav-list">
+                <a href="http://175.126.26.219:30/classmate">
+                  <svg
+                    id="calendar-event"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="55"
+                    height="55"
+                    viewBox="0 0 55 55"
+                    class="mobile-menu-icon"
+                  >
+                    <path
+                      id="패스_6"
+                      data-name="패스 6"
+                      d="M3.437,12.8V47.967a3.478,3.478,0,0,0,3.438,3.517h41.25a3.478,3.478,0,0,0,3.438-3.517V12.8ZM6.875,2.25A6.956,6.956,0,0,0,0,9.283V47.967A6.956,6.956,0,0,0,6.875,55h41.25A6.956,6.956,0,0,0,55,47.967V9.283A6.956,6.956,0,0,0,48.125,2.25Z"
+                      transform="translate(0 0)"
+                      fill="#071648"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="패스_7"
+                      data-name="패스 7"
+                      d="M8.825,0C9.971,0,10.9.5,10.9,1.125V2.25c0,.621-.929,1.125-2.075,1.125S6.75,2.871,6.75,2.25V1.125C6.75.5,7.679,0,8.825,0Zm37.35,0c1.146,0,2.075.5,2.075,1.125V2.25c0,.621-.929,1.125-2.075,1.125S44.1,2.871,44.1,2.25V1.125C44.1.5,45.029,0,46.175,0Z"
+                      fill="#071648"
+                      fill-rule="evenodd"
+                    />
+                    <path
+                      id="패스_8"
+                      data-name="패스 8"
+                      d="M25.875,13.5h2.25a1.125,1.125,0,0,1,1.125,1.125v2.25A1.125,1.125,0,0,1,28.125,18h-2.25a1.125,1.125,0,0,1-1.125-1.125v-2.25A1.125,1.125,0,0,1,25.875,13.5Z"
+                      transform="translate(14.929 8.143)"
+                      fill="#071648"
+                    />
+                  </svg>
+                  <h2 class="nav-btn">품앗이</h2>
+                </a>
+              </li>
+              <li class="nav-list main-search">
+                <form class="nav-search-form">
+                  <input
+                    type="text"
+                    maxlength="20"
+                    placeholder="검색"
+                    class="nav-search"
+                  />
+                </form>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="gnb-wrap">
+          <ul class="gnb-list-wrap">
+            <li class="gnb-list login">
+              <a href="" class="gnb-btn-login">로그인</a>
+            </li>
+            <li class="gnb-list register">
+              <a href="" class="gnb-btn-register">회원가입</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="center">
+      <link rel="stylesheet" href="Css/MainContent.css" />
+      <main class="main">
+        <section class="study-main">
+          <div class="study-main-contents">
+            <div class="study-main-header">
+              <div class="main-header-r">
+                <h3 class="main-title">스터디</h3>
+                <h5 class="main-subTitle">최근 등록된 스터디 목록입니다.</h5>
+              </div>
+              <div class="main-header-l">
+                <a href="http://175.126.26.219:30/study" class="main-goStudy"
+                  >더보기</a
+                >
+              </div>
+            </div>
+            <div class="study-main-body">
+              <div class="study-main-item-list-wrap">
+                <div class="study-main-item-list">
+                  <div class="study-item-img-wrap">
+                    <img
+                      src="Img/study1.jpg"
+                      alt="study-img"
+                      class="study-item-img"
+                    />
+                    <div class="study-item-info-cover">
+                      <h3 class="study-item-info-day">D-day</h3>
+                    </div>
+                  </div>
+                  <div class="study-item-txt-wrap">
+                    <h4 class="study-item-txt-title">파이썬 스터디</h4>
+                    <p class="study-item-txt-subTitle">비대면</p>
+                  </div>
+                </div>
+                <div class="study-main-item-list">
+                  <div class="study-item-img-wrap">
+                    <img
+                      src="Img/study2.jpg"
+                      alt="study-img"
+                      class="study-item-img"
+                    />
+                    <div class="study-item-info-cover">
+                      <h3 class="study-item-info-day">D-1</h3>
+                    </div>
+                  </div>
+                  <div class="study-item-txt-wrap">
+                    <h4 class="study-item-txt-title">Zoom 자율스터디</h4>
+                    <p class="study-item-txt-subTitle">비대면</p>
+                  </div>
+                </div>
+                <div class="study-main-item-list">
+                  <div class="study-item-img-wrap">
+                    <img
+                      src="Img/study1.jpg"
+                      alt="study-img"
+                      class="study-item-img"
+                    />
+                    <div class="study-item-info-cover">
+                      <h3 class="study-item-info-day">D-9</h3>
+                    </div>
+                  </div>
+                  <div class="study-item-txt-wrap">
+                    <h4 class="study-item-txt-title">공무원 스터디</h4>
+                    <p class="study-item-txt-subTitle">경기도 부천시</p>
+                  </div>
+                </div>
+                <div class="study-main-item-list">
+                  <div class="study-item-img-wrap">
+                    <img
+                      src="Img/study3.jpg"
+                      alt="study-img"
+                      class="study-item-img"
+                    />
+                    <div class="study-item-info-cover">
+                      <h3 class="study-item-info-day">D-day</h3>
+                    </div>
+                  </div>
+                  <div class="study-item-txt-wrap">
+                    <h4 class="study-item-txt-title">C++ 스터디</h4>
+                    <p class="study-item-txt-subTitle">서울특별시 강남구</p>
+                  </div>
+                </div>
+                <div class="study-main-item-list">
+                  <div class="study-item-img-wrap">
+                    <img
+                      src="Img/study3.jpg"
+                      alt="study-img"
+                      class="study-item-img"
+                    />
+                    <div class="study-item-info-cover">
+                      <h3 class="study-item-info-day">D-3</h3>
+                    </div>
+                  </div>
+                  <div class="study-item-txt-wrap">
+                    <h4 class="study-item-txt-title">Django 스터디 모집</h4>
+                    <p class="study-item-txt-subTitle">경기도 군포시</p>
+                  </div>
+                </div>
+                <div class="study-main-item-list">
+                  <div class="study-item-img-wrap">
+                    <img
+                      src="Img/study2.jpg"
+                      alt="study-img"
+                      class="study-item-img"
+                    />
+                    <div class="study-item-info-cover">
+                      <h3 class="study-item-info-day">D-10</h3>
+                    </div>
+                  </div>
+                  <div class="study-item-txt-wrap">
+                    <h4 class="study-item-txt-title">미적분 스터디</h4>
+                    <p class="study-item-txt-subTitle">비대면</p>
+                  </div>
+                </div>
+                <div class="study-main-item-list">
+                  <div class="study-item-img-wrap">
+                    <img
+                      src="Img/study2.jpg"
+                      alt="study-img"
+                      class="study-item-img"
+                    />
+                    <div class="study-item-info-cover">
+                      <h3 class="study-item-info-day">D-day</h3>
+                    </div>
+                  </div>
+                  <div class="study-item-txt-wrap">
+                    <h4 class="study-item-txt-title">회계사 스터디</h4>
+                    <p class="study-item-txt-subTitle">경기도 용인시</p>
+                  </div>
+                </div>
+                <div class="study-main-item-list">
+                  <div class="study-item-img-wrap">
+                    <img
+                      src="Img/study1.jpg"
+                      alt="study-img"
+                      class="study-item-img"
+                    />
+                    <div class="study-item-info-cover">
+                      <h3 class="study-item-info-day">D-day</h3>
+                    </div>
+                  </div>
+                  <div class="study-item-txt-wrap">
+                    <h4 class="study-item-txt-title">영어회화 스터디</h4>
+                    <p class="study-item-txt-subTitle">경기도 안양시</p>
+                  </div>
+                </div>
+                <div class="study-main-item-list">
+                  <div class="study-item-img-wrap">
+                    <img
+                      src="Img/study3.jpg"
+                      alt="study-img"
+                      class="study-item-img"
+                    />
+                    <div class="study-item-info-cover">
+                      <h3 class="study-item-info-day">D-1</h3>
+                    </div>
+                  </div>
+                  <div class="study-item-txt-wrap">
+                    <h4 class="study-item-txt-title">놀아줄사람?</h4>
+                    <p class="study-item-txt-subTitle">경기도 하남시</p>
+                  </div>
+                </div>
+                <div class="study-main-item-list">
+                  <div class="study-item-img-wrap">
+                    <img
+                      src="Img/study1.jpg"
+                      alt="study-img"
+                      class="study-item-img"
+                    />
+                    <div class="study-item-info-cover">
+                      <h3 class="study-item-info-day">D-day</h3>
+                    </div>
+                  </div>
+                  <div class="study-item-txt-wrap">
+                    <h4 class="study-item-txt-title">
+                      경제학 같이 공부하실분 모집합니다
+                    </h4>
+                    <p class="study-item-txt-subTitle">비대면</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="contest-main">
+          <div class="contest-main-contents">
+            <div class="contest-main-header">
+              <div class="main-header-r">
+                <h3 class="main-title">공모전</h3>
+                <h5 class="main-subTitle">최근 등록된 공모전 목록입니다.</h5>
+              </div>
+              <div class="main-header-l">
+                <a href="http://175.126.26.219:30/contest" class="main-goStudy"
+                  >더보기</a
+                >
+              </div>
+            </div>
+            <div class="contest-main-body">
+              <ol class="main-item-list-wrap">
+                <li class="main-item-list">
+                  <a class="main-item">
+                    <div class="main-item-head">
+                      <h4 class="main-item-title">
+                        2021 구포 미디어아트 페스티벌 공모전 개최
+                      </h4>
+                      <p class="main-item-subtitle">부산시 북구</p>
+                    </div>
+                    <div class="main-item-tail">
+                      <h3 class="main-item-day">D-11</h3>
+                    </div>
+                  </a>
+                </li>
+                <li class="main-item-list">
+                  <a class="main-item">
+                    <div class="main-item-head">
+                      <h4 class="main-item-title">
+                        2021 한국제정정보원 혁신 아이디어 공모전
+                      </h4>
+                      <p class="main-item-subtitle">한국재정정보원</p>
+                    </div>
+                    <div class="main-item-tail">
+                      <h3 class="main-item-day">D-12</h3>
+                    </div>
+                  </a>
+                </li>
+                <li class="main-item-list">
+                  <a class="main-item">
+                    <div class="main-item-head">
+                      <h4 class="main-item-title">
+                        제 27회 홍대앞 거리미술전 작가 모집
+                      </h4>
+                      <p class="main-item-subtitle">홍대앞 거리미술전</p>
+                    </div>
+                    <div class="main-item-tail">
+                      <h3 class="main-item-day">D-11</h3>
+                    </div>
+                  </a>
+                </li>
+                <li class="main-item-list">
+                  <a class="main-item">
+                    <div class="main-item-head">
+                      <h4 class="main-item-title">
+                        SMART 창업 프로그램 참여 수기공모전 같이하실분 구합니다
+                      </h4>
+                      <p class="main-item-subtitle">
+                        경남지역혁신플랫폼 스마트공동체사업단
+                      </p>
+                    </div>
+                    <div class="main-item-tail">
+                      <h3 class="main-item-day">D-day</h3>
+                    </div>
+                  </a>
+                </li>
+                <li class="main-item-list">
+                  <a class="main-item">
+                    <div class="main-item-head">
+                      <h4 class="main-item-title">
+                        삼성주최 혁신 아이디어 대회 공모
+                      </h4>
+                      <p class="main-item-subtitle">삼성SDS</p>
+                    </div>
+                    <div class="main-item-tail">
+                      <h3 class="main-item-day">D-1</h3>
+                    </div>
+                  </a>
+                </li>
+                <li class="main-item-list">
+                  <a class="main-item">
+                    <div class="main-item-head">
+                      <h4 class="main-item-title">
+                        2021 제 7대 DB GAPS 투자대회 참가하실분 모집합니다
+                      </h4>
+                      <p class="main-item-subtitle">DB 김준기 문화재단</p>
+                    </div>
+                    <div class="main-item-tail">
+                      <h3 class="main-item-day">D-8</h3>
+                    </div>
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        <section class="classmate-main">
+          <div class="classmate-main-contents">
+            <div class="classmate-main-header">
+              <div class="main-header-r">
+                <h3 class="main-title">품앗이</h3>
+                <h5 class="main-subTitle">최근 등록된 품앗이 목록입니다.</h5>
+              </div>
+              <div class="main-header-l">
+                <a
+                  href="http://175.126.26.219:30/classmate"
+                  class="main-goStudy"
+                  >더보기</a
+                >
+              </div>
+            </div>
+            <div class="classmate-main-body">
+              <ol class="main-item-list-wrap">
+                <li class="main-item-list">
+                  <a class="main-item">
+                    <div class="main-item-head">
+                      <h4 class="main-item-title">
+                        XXX교수님 물리학1 품앗이 같이 하실분 모집합니다.
+                      </h4>
+                      <p class="main-item-subtitle">물리학1</p>
+                    </div>
+                    <div class="main-item-tail">
+                      <h3 class="main-item-day">D-8</h3>
+                    </div>
+                  </a>
+                </li>
+                <li class="main-item-list">
+                  <a class="main-item">
+                    <div class="main-item-head">
+                      <h4 class="main-item-title">
+                        XXX교수님 영어회화 품앗이 하실분
+                      </h4>
+                      <p class="main-item-subtitle">영어회화</p>
+                    </div>
+                    <div class="main-item-tail">
+                      <h3 class="main-item-day">D-12</h3>
+                    </div>
+                  </a>
+                </li>
+                <li class="main-item-list">
+                  <a class="main-item">
+                    <div class="main-item-head">
+                      <h4 class="main-item-title">미적분 1 XX교수님 품앗이</h4>
+                      <p class="main-item-subtitle">미적분1</p>
+                    </div>
+                    <div class="main-item-tail">
+                      <h3 class="main-item-day">D-3</h3>
+                    </div>
+                  </a>
+                </li>
+                <li class="main-item-list">
+                  <a class="main-item">
+                    <div class="main-item-head">
+                      <h4 class="main-item-title">C언어 잘하시는분 모집</h4>
+                      <p class="main-item-subtitle">C언어</p>
+                    </div>
+                    <div class="main-item-tail">
+                      <h3 class="main-item-day">D-3</h3>
+                    </div>
+                  </a>
+                </li>
+                <li class="main-item-list">
+                  <a class="main-item">
+                    <div class="main-item-head">
+                      <h4 class="main-item-title">
+                        정통 파이썬기초 품앗이 모집합니다.
+                      </h4>
+                      <p class="main-item-subtitle">파이썬기초</p>
+                    </div>
+                    <div class="main-item-tail">
+                      <h3 class="main-item-day">D-1</h3>
+                    </div>
+                  </a>
+                </li>
+                <li class="main-item-list">
+                  <a class="main-item">
+                    <div class="main-item-head">
+                      <h4 class="main-item-title">XXX교수님 영어1</h4>
+                      <p class="main-item-subtitle">영어1</p>
+                    </div>
+                    <div class="main-item-tail">
+                      <h3 class="main-item-day">D-11</h3>
+                    </div>
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <link rel="stylesheet" href="Css/Footer.css" />
+      <div class="footer">
+        <ul class="footer-list-wrap">
+          <li class="footer-list">
+            <a href="" class="footer-txt 1">문의사항</a>
+          </li>
+          <li class="footer-list">
+            <a href="" class="footer-txt 2">개인정보처리방침</a>
+          </li>
+          <li class="footer-list">
+            <a href="/" class="footer-txt 3">ⓒ스터띵윗미</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

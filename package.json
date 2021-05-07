@@ -1,0 +1,14 @@
+{
+  "name": "studdingwithme",
+  "version": "1.0.0",
+  "description": "M.C.C 매칭서비스 프로젝트",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ksone02",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
