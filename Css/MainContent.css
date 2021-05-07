@@ -240,12 +240,11 @@
 
 @media (max-width: 1919px) {
     .study-main {
-        padding: 50px 20px;
+        padding: 70px 20px;
     }
 
     .contest-main {
-        padding: 0 20px;
-        padding-bottom: 50px;
+        padding: 0 20px 80px;
     }
 
     .classmate-main {
