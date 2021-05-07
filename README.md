@@ -1,2 +1,2 @@
-# StuDDingWithMe
+# 스터띵윗미
 MCC 매칭서비스 프로젝트
