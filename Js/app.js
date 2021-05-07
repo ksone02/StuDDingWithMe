@@ -4,7 +4,7 @@ var app = Sammy(function () {
  
     this.get("/", function () {
         //인덱스 페이지
-        $(".center").load("../Main.html .center");
+        $(".center").load("../index.html .center");
     });
  
     
