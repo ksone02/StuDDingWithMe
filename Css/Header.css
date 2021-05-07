@@ -254,8 +254,7 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: calc(33.33333% - 10px);
-        transform: scale(0.8);
+        width: calc(33.33333% - 100px);
     }
 
     .nav-list a {
@@ -318,8 +317,7 @@ nav {
     }
 
     .nav-list {
-        width: calc(33.33333% - 10px);
-        transform: scale(0.8);
+        width: calc(33.33333% - 40px);
     }
 
     .nav-list a {
@@ -328,8 +326,19 @@ nav {
 
 }
 
-@media(max-width: 359px) {
+@media(max-width: 399px) {
 
+    .nav-list {
+        width: calc(33.33333% - 15px);
+        transform: scale(0.9);
+    }
+
+    .nav-btn {
+        font-family: notoMedium;
+    }
+}
+
+@media(max-width: 359px) {
     .logo-subtitle {
         font-size: 9px;
     }

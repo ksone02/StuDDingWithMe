@@ -66,7 +66,6 @@
     width: calc(20% - 16px);
     height: auto;
     border-radius: 6px;
-    background-color: #fff;
     position: relative;
     cursor: pointer;
 }
@@ -369,6 +368,14 @@
 
     .study-item-img {
         height: 90px;
+    }
+
+    .main-title {
+        font-family: notoMedium;
+    }
+
+    .study-item-txt-subTitle {
+        font-size: 12px;
     }
 }
 @media (max-width: 349px) {
