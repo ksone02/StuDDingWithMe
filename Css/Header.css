@@ -173,7 +173,7 @@ nav {
 
 @media (max-width: 959px) {
     header {
-        height: 300px;
+        height: 330px;
         position: relative;
         background-color: transparent;
     }
@@ -185,7 +185,7 @@ nav {
     }
 
     .nav-wrap {
-        padding: 30px 30px;
+        padding: 15px 15px;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -254,6 +254,8 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: calc(33.33333% - 10px);
+        transform: scale(0.8);
     }
 
     .nav-list a {
@@ -262,7 +264,7 @@ nav {
         justify-content: center;
         align-items: center;
         height: 100%;
-        width: 100px;
+        width: auto;
         padding: 0 10px;
     }
 
@@ -285,6 +287,11 @@ nav {
 }
 
 @media(max-width: 699px) {
+
+    header {
+        height: 300px;
+    }
+
     .nav-wrap {
         padding: 15px 15px;
     }
@@ -308,6 +315,23 @@ nav {
     .logo-login-mobile {
         padding: 10px 12px;
         font-size: 15px;
+    }
+
+    .nav-list {
+        width: calc(33.33333% - 10px);
+        transform: scale(0.8);
+    }
+
+    .nav-list a {
+        width: auto;
+    }
+
+}
+
+@media(max-width: 359px) {
+
+    .logo-subtitle {
+        font-size: 9px;
     }
 }
 

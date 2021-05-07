@@ -268,6 +268,7 @@
 }
 
 @media (max-width: 959px) {
+
     .study-main-item-list {
         width: calc(33.33333% - 17px);
     }
@@ -307,7 +308,7 @@
 
     .contest-main {
         padding: 0;
-        padding-bottom: 50px;
+        padding-bottom: 80px;
     }
 
     .contest-main-header {
@@ -315,7 +316,7 @@
     }
 
     .main-item-head {
-        width: 300px;
+        width: 290px;
     }
 
     .classmate-main {
@@ -327,25 +328,9 @@
     }
 }
 
-@media(max-width: 699px) {
-    .nav-list {
-        width: calc(33.33333% - 10px);
-        transform: scale(0.8);
-    }
-
-    .nav-list a {
-        width: auto;
-    }
-
-}
-
 @media(max-width: 359px) {
-
     .main-item-head {
         width: 220px;
     }
-
-    .logo-subtitle {
-        font-size: 9px;
-    }
 }
+

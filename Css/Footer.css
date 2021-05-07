@@ -28,13 +28,9 @@ footer {
     background-color: transparent;
 }
 
-@media(max-width: 699px) {
-
-    .footer-list {
-        margin: 0 10px;
-    }
+@media(max-width: 959px) {
 
     .footer-txt {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
