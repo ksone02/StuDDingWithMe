@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+}
+
+main {
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-head {
+    display: flex;
+}
+.login-center {
+    display: flex;
+}
+
+.login-studentNumber {
+    display: flex;
+}
+
+.login-id {
+    display: flex;
+}
+
+.login-pw {
+    display: flex;
+}
+
+.login-repw {
+    display: flex;
+}
