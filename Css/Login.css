@@ -11,6 +11,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.MuiSvgIcon-fontSizeSmall {
+    width: 30px;
 }
 
 .login-form {
@@ -38,5 +44,9 @@ main {
 }
 
 .login-repw {
+    display: flex;
+}
+
+.login-name {
     display: flex;
 }

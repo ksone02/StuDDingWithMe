@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="Css/Login.css" />
   </head>
   <body>
-    <script src="" async defer></script>
     <main>
         <div class="login-form">
             <div class="login-head">
@@ -17,22 +16,47 @@
                 <h4>Sign in</h4>
             </div>
             <div class="login-center">
-                <form action="">
+                <form action="" method="POST">
                     <div class="login-id">
                         <h3>ID</h3>
-                        <input type="text" class="login-id-input" placeholder="아이디를 입력하세요.">
+                        <input type="text" class="login-id-input" placeholder="아이디를 입력하세요." name="id">
+                    </div>
+                    <div class="login-studentNumber" style="display: none;">
+                        <h3>StudentNumber</h3>
+                        <input type="text" class="login-studentNumber-input" placeholder="학번을 입력하세요." name="studentNumber">
                     </div>
                     <div class="login-pw">
                         <h3>Password</h3>
-                        <input type="password" class="login-pw-input" placeholder="비밀번호를 입력하세요.">
+                        <input type="password" class="login-pw-input" placeholder="비밀번호를 입력하세요." name="password">
                     </div>
                     <div class="login-submit">
                         <input type="submit" value="로그인(login)">
                     </div>
                 </form>
             </div>
-            <div class="login-footer"></div>
+            <div class="login-footer">
+                <input type="button" onclick="onStudentNumber();" value="학번으로 로그인" id="setButton">
+                <button class="goRegister" onclick="location.href='/register-form.html'">회원가입</button>
+            </div>
         </div>
     </main>
+    <script>
+        function onStudentNumber() {
+            var studentNumber = document.getElementsByClassName("login-studentNumber")[0];
+            var id = document.getElementsByClassName("login-id")[0];
+            var btn = document.getElementById("setButton");
+
+            if(studentNumber.style.display=="none") {
+                studentNumber.style.display = "block";
+                id.style.display = "none";
+                btn.value = "ID로 로그인";
+            } else {
+                studentNumber.style.display = "none";
+                id.style.display = "block";
+                btn.value = "학번으로 로그인";
+            }
+            
+        }
+    </script>
   </body>
 </html>
