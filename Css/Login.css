@@ -1,5 +1,29 @@
+@font-face {
+    font-family: notoBold;
+    src: url('../Font/NotoSansKR-Bold.otf');
+}
+@font-face {
+    font-family: notoMedium;
+    src: url('../Font/NotoSansKR-Medium.otf');
+}
+@font-face {
+    font-family: notoRegular;
+    src: url('../Font/NotoSansKR-Regular.otf');
+}
+
 * {
     margin: 0;
+}
+
+input {
+    outline: none;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #bfbfbf;
+    box-sizing: border-box;
+    font-family: notoRegular;
+    font-weight: 300;
+    font-size: 14px;
 }
 
 main {
@@ -7,7 +31,7 @@ main {
     margin: auto;
     position: absolute;
     width: 600px;
-    height: 350px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,24 +53,20 @@ main {
 }
 .login-center {
     display: flex;
+    margin: 20px 0;
 }
 
-.login-studentNumber {
-    display: flex;
+.login-center h3 {
+    font-size: 14px;
+    font-family: notoMedium;
 }
 
-.login-id {
-    display: flex;
+.login-head h1{
+    font-size: 25px;
+    font-family: notoBold;
 }
 
-.login-pw {
-    display: flex;
-}
-
-.login-repw {
-    display: flex;
-}
-
-.login-name {
-    display: flex;
+.login-head h4 {
+    font-size: 15px;
+    font-family: notoMedium;
 }

@@ -13,6 +13,7 @@
     />
   </head>
   <body>
+    <script src="Js/RegisterCheck.js" async defer></script>
     <main>
       <div class="login-form">
         <div class="login-head">
@@ -20,7 +21,7 @@
           <h4>Sign up</h4>
         </div>
         <div class="login-center">
-          <form action="" method="POST">
+          <form name="form" action="" method="POST" onsubmit="return checkAll()">
             <div class="login-studentNumber">
               <h3>Student Number</h3>
               <input
@@ -46,7 +47,6 @@
                 class="login-pw-input"
                 placeholder="비밀번호를 입력하세요."
                 name = "password"
-                onchange="check_pw()"
               />
             </div>
             <div class="login-repw">
@@ -55,7 +55,7 @@
                 type="password"
                 class="login-repw-input"
                 placeholder="비밀번호를 다시 입력하세요."
-                onchange="check_pw()"
+                name = "repassword"
               />
             </div>
             <span id="check"></span>
@@ -78,20 +78,5 @@
         </div>
       </div>
     </main> 
-    <script>
-      function check_pw() {
-        var pw = document.getElementsByClassName("login-pw-input")[0].value;
-        var pw2 = document.getElementsByClassName("login-repw-input")[0].value;
-        var check = document.getElementById("check");
-
-        if(pw != '' && pw2 != '') {
-          if(pw == pw2) {
-            check.innerHTML = "비밀번호가 일치합니다.";
-          } else {
-            check.innerHTML = "비밀번호가 일치하지 않습니다.";
-          }
-        }
-      }
-    </script>
   </body>
 </html>
