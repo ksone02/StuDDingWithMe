@@ -48,3 +48,8 @@ ol {
         background-color: #FAFAFA;
     }
 }
+
+::selection {
+    background-color: rgba(66, 110, 255, 0.25);
+    color: inherit;
+}
