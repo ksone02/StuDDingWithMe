@@ -1,0 +1,42 @@
+.center {
+    margin-top: 60px;
+    background-color: #fff;
+    position: relative;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.myPage-left {
+    border: 1px solid #bebebe;
+    width: calc(33.333% - 27px);
+    height: 500px;
+}
+
+.myPage-right {
+    border: 1px solid #bebebe;
+    width: calc(66.666% - 27px);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.myPost {
+    border: 1px solid #bebebe;
+    height: 45%;
+}
+
+.myComment {
+    border: 1px solid #bebebe;
+    height: 45%;
+}
+
+@media (max-width: 1919px) {
+    .main {
+        padding: 70px 50px;
+    }
+}

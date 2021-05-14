@@ -11,6 +11,9 @@ function checkAll() {
     else if (!check_name(form.name.value)) {
         return false;
     } 
+    else if (!check_nickname(form.nickname.value)) {
+        return false;
+    } 
     else {
         alert(form.name.value + "님 회원가입을 축하합니다!");
         return true;
@@ -81,5 +84,11 @@ function check_id(id) {
       return true;
   }
 
+  function check_nickname(nickname) {
+    if(!checkExistData(nickname, "닉네임을")) {
+        return false;
+    }
+    return true;
+}
 
 
