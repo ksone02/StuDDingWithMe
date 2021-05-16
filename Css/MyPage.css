@@ -12,12 +12,12 @@
 
 .myPage-left {
     border: 1px solid #bebebe;
+    border-radius: 5px;
     width: calc(33.333% - 27px);
     height: 500px;
 }
 
 .myPage-right {
-    border: 1px solid #bebebe;
     width: calc(66.666% - 27px);
     height: 500px;
     display: flex;
@@ -27,12 +27,30 @@
 
 .myPost {
     border: 1px solid #bebebe;
+    border-radius: 5px;
     height: 45%;
+}
+
+.myPost-head {
+    margin: 10px;
 }
 
 .myComment {
     border: 1px solid #bebebe;
+    border-radius: 5px;
     height: 45%;
+}
+
+.myComment-head {
+    margin: 10px;
+}
+
+.myinfo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100px;
+    margin: 10px;
 }
 
 @media (max-width: 1919px) {
