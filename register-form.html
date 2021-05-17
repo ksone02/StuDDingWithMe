@@ -7,9 +7,31 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="Css/Login.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <script src="Js/RegisterCheck.js" async defer></script>
+    <script type="text/javascript">
+      function register() {
+        $.ajax({
+          url: "./register",
+          type: "POST",
+          data: $("form").serialize(),
+          success: function (result) {
+            if(result.result == "ok") {
+              alert("회원가입 성공");
+              location.href="login-form.html";
+            } else {
+              alert("회원가입 실패");
+            }
+          },
+        });
+      }
+    </script>
     <main>
       <div class="login-form">
         <div class="login-head">
@@ -17,14 +39,14 @@
           <h4>Sign up</h4>
         </div>
         <div class="login-center">
-          <form name="form" action="" method="POST" onsubmit="return checkAll()">
+          <form>
             <div class="login-studentNumber">
               <h3>학번</h3>
               <input
                 type="text"
                 class="login-studentNumber-input"
                 placeholder="학번을 입력하세요."
-                name = "studentNumber"
+                name="studentNumber"
               />
             </div>
             <div class="login-id">
@@ -33,7 +55,7 @@
                 type="text"
                 class="login-id-input"
                 placeholder="아이디를 입력하세요."
-                name = "id"
+                name="id"
               />
             </div>
             <div class="login-pw">
@@ -42,7 +64,7 @@
                 type="password"
                 class="login-pw-input"
                 placeholder="비밀번호를 입력하세요."
-                name = "password"
+                name="password"
               />
             </div>
             <div class="login-repw">
@@ -51,7 +73,7 @@
                 type="password"
                 class="login-repw-input"
                 placeholder="비밀번호를 다시 입력하세요."
-                name = "repassword"
+                name="repassword"
               />
             </div>
             <div class="login-name">
@@ -60,7 +82,7 @@
                 type="text"
                 class="login-name-input"
                 placeholder="이름을 입력하세요."
-                name = "name"
+                name="name"
               />
             </div>
             <div class="login-nickname">
@@ -69,18 +91,24 @@
                 type="text"
                 class="login-nickname-input"
                 placeholder="닉네임을 입력하세요."
-                name = "nickname"
+                name="nickname"
               />
             </div>
             <div class="login-submit">
-              <input type="submit" value="회원가입(register)" />
+              <input
+                type="button"
+                value="회원가입(register)"
+                onclick="register();"
+              />
             </div>
           </form>
         </div>
         <div class="login-footer">
-          <button class="goLogin" onclick="location.href='/login-form.html'">로그인하러가기</button>
+          <button class="goLogin" onclick="location.href='/login-form.html'">
+            로그인하러가기
+          </button>
         </div>
       </div>
-    </main> 
+    </main>
   </body>
 </html>

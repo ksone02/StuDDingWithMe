@@ -7,8 +7,26 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="Css/Login.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
+    <script type="text/javascript">
+      function login() {
+        $.ajax({
+          url: "./login",
+          type: "POST",
+          data: $("form").serialize(),
+          success: function (result) {
+            if(result.result == "ok") {
+              alert("회원가입 성공");
+              location.href="login-form.html";
+            } else {
+              alert("회원가입 실패");
+            }
+          },
+        });
+      }
+    </script>
     <main>
       <div class="login-form">
         <div class="login-head">
@@ -16,7 +34,7 @@
           <h4>Sign in</h4>
         </div>
         <div class="login-center">
-          <form action="" method="POST">
+          <form>
             <div class="login-id">
               <h3>아이디</h3>
               <input
@@ -45,7 +63,7 @@
               />
             </div>
             <div class="login-submit">
-              <input type="submit" value="로그인(login)" />
+              <input type="button" value="로그인(login)" onclick="login();" />
             </div>
           </form>
         </div>
@@ -58,7 +76,7 @@
           />
           <button
             class="goRegister"
-            onclick="location.href='register-form.html'"
+            onclick="location.href='/register-form.html'"
           >
             회원가입
           </button>
