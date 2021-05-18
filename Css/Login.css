@@ -15,45 +15,87 @@
     margin: 0;
 }
 
+body {
+    background-color: #FAFAFA;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #071648;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.home-btn {
+    margin-top: -5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-stuDDingWithMe {
+    width: 183px;
+    height: 60px;
+    display: block;
+    background: url(../Img/logo.png) center/70% no-repeat;
+}
+
 input {
     outline: none;
     width: 100%;
-    border: none;
-    border-bottom: 1px solid #bfbfbf;
-    box-sizing: border-box;
     font-family: notoRegular;
     font-weight: 300;
     font-size: 14px;
+    border: none;
+    border-bottom: 2px solid #BFBFBF;
+    padding: 10px 0;
+    transition: all .3s ease;
+}
+
+input:focus {
+    border-bottom: 2px solid #071648;
 }
 
 main {
     top: 0; bottom: 0; left: 0; right: 0;
     margin: auto;
+    margin-top: 60px;
     position: absolute;
-    width: 600px;
-    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 3px solid black;
-    border-radius: 20px;
-}
-
-.MuiSvgIcon-fontSizeSmall {
-    width: 30px;
+    width: 250px;
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 .login-head {
     display: flex;
+    justify-content: center;
 }
+
+.login-head h1 {
+    font-family: notoBold;
+    font-size: 20px;
+}
+
 .login-center {
     display: flex;
     margin: 20px 0;
+    width: 100%;
+}
+
+form {
+    width: 100%;
 }
 
 .login-center h3 {
@@ -61,12 +103,53 @@ main {
     font-family: notoMedium;
 }
 
-.login-head h1{
-    font-size: 25px;
+.login-input {
+    margin-bottom: 15px;
+}
+
+.login-submit-btn {
+    border: none;
+    border-radius: 15px;
+    margin-top: 20px;
+    background-color: #071648;
+    color: #FAFAFA;
+    cursor: pointer;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 700;
     font-family: notoBold;
 }
 
-.login-head h4 {
-    font-size: 15px;
-    font-family: notoMedium;
+.login-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#setButton {
+    font-size: 13px;
+    color: #071648;
+}
+
+.go-register {
+    display: flex;
+    width: 58%;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 12px;;
+}
+
+.go-register p {
+    color: #A1A1A1;
+}
+
+.goRegister {
+    color: #071648;
+}
+
+.isRegister {
+    margin-top: 0;
+    width: 55%;
 }

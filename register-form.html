@@ -7,6 +7,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="Css/Login.css" />
+    <link rel="stylesheet" href="Css/Main.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -14,7 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <script src="Js/RegisterCheck.js" async defer></script>
+    <!--<script src="Js/RegisterCheck.js" async defer></script>-->
     <script type="text/javascript">
       function register() {
         $.ajax({
@@ -23,7 +24,7 @@
           data: $("form").serialize(),
           success: function (result) {
             if(result.result == "ok") {
-              alert("회원가입 성공");
+              alert("가입을 축하합니다.");
               location.href="login-form.html";
             } else {
               alert("회원가입 실패");
@@ -32,81 +33,83 @@
         });
       }
     </script>
+    <header>
+      <div class="home-btn">
+        <a href="index.html" class="logo-stuDDingWithMe"></a>
+      </div>
+    </header>
     <main>
       <div class="login-form">
         <div class="login-head">
           <h1>회원가입</h1>
-          <h4>Sign up</h4>
         </div>
         <div class="login-center">
           <form>
-            <div class="login-studentNumber">
-              <h3>학번</h3>
+            <div class="login-input login-studentNumber">
               <input
                 type="text"
                 class="login-studentNumber-input"
-                placeholder="학번을 입력하세요."
+                placeholder="STUDENT NUMBER"
                 name="studentNumber"
               />
             </div>
-            <div class="login-id">
-              <h3>아이디</h3>
+            <div class="login-input login-id">
               <input
                 type="text"
                 class="login-id-input"
-                placeholder="아이디를 입력하세요."
+                placeholder="ID"
                 name="id"
               />
             </div>
-            <div class="login-pw">
-              <h3>비밀번호</h3>
+            <div class="login-input login-pw">
               <input
                 type="password"
                 class="login-pw-input"
-                placeholder="비밀번호를 입력하세요."
+                placeholder="PASSWORD"
                 name="password"
               />
             </div>
-            <div class="login-repw">
-              <h3>비밀번호 확인</h3>
+            <div class="login-input login-repw">
               <input
                 type="password"
                 class="login-repw-input"
-                placeholder="비밀번호를 다시 입력하세요."
+                placeholder="PASSWORD CHECK"
                 name="repassword"
               />
             </div>
-            <div class="login-name">
-              <h3>이름</h3>
+            <div class="login-input login-name">
               <input
                 type="text"
                 class="login-name-input"
-                placeholder="이름을 입력하세요."
+                placeholder="NAME"
                 name="name"
               />
             </div>
-            <div class="login-nickname">
-              <h3>닉네임</h3>
+            <div class="login-input login-nickname">
               <input
                 type="text"
                 class="login-nickname-input"
-                placeholder="닉네임을 입력하세요."
+                placeholder="NICKNAME"
                 name="nickname"
               />
             </div>
             <div class="login-submit">
               <input
                 type="button"
-                value="회원가입(register)"
+                value="회원가입"
                 onclick="register();"
+                class="login-submit-btn"
               />
             </div>
           </form>
         </div>
         <div class="login-footer">
-          <button class="goLogin" onclick="location.href='/login-form.html'">
-            로그인하러가기
-          </button>
+          <div class="go-register isRegister">
+            <p>계정이 있으십니까? </p>
+            <a class="goRegister" href="login-form.html">
+            로그인
+          </a>
+          </div>
         </div>
       </div>
     </main>

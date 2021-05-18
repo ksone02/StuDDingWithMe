@@ -7,7 +7,9 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="Css/Login.css" />
+    <link rel="stylesheet" href="Css/Main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./Js/LoginCheck.js"></script>
   </head>
   <body>
     <script type="text/javascript">
@@ -16,70 +18,71 @@
           url: "./login",
           type: "POST",
           data: $("form").serialize(),
+          dataType: "json",
           success: function (result) {
             if(result.result == "ok") {
-              alert("회원가입 성공");
-              location.href="login-form.html";
+              alert("로그인 성공");
+              alert(result.id);
+              location.href="index.html";
             } else {
-              alert("회원가입 실패");
+              alert("로그인 실패");
             }
           },
         });
       }
     </script>
+    <header>
+      <div class="home-btn">
+        <a href="index.html" class="logo-stuDDingWithMe"></a>
+      </div>
+    </header>
     <main>
       <div class="login-form">
         <div class="login-head">
           <h1>로그인</h1>
-          <h4>Sign in</h4>
         </div>
         <div class="login-center">
           <form>
-            <div class="login-id">
-              <h3>아이디</h3>
+            <div class="login-input login-id">
               <input
                 type="text"
                 class="login-id-input"
-                placeholder="아이디를 입력하세요."
+                placeholder="ID"
                 name="id"
               />
             </div>
-            <div class="login-studentNumber" style="display: none">
-              <h3>학번</h3>
+            <div class="login-input login-studentNumber" style="display: none">
               <input
                 type="text"
                 class="login-studentNumber-input"
-                placeholder="학번을 입력하세요."
+                placeholder="STUDENT NUMBER"
                 name="studentNumber"
               />
             </div>
-            <div class="login-pw">
-              <h3>비밀번호</h3>
+            <div class="login-input login-pw">
               <input
                 type="password"
                 class="login-pw-input"
-                placeholder="비밀번호를 입력하세요."
+                placeholder="PASSWORD"
                 name="password"
               />
             </div>
             <div class="login-submit">
-              <input type="button" value="로그인(login)" onclick="login();" />
+              <input type="button" value="로그인" onclick="login();" class="login-submit-btn"/>
             </div>
           </form>
         </div>
         <div class="login-footer">
-          <input
-            type="button"
-            onclick="onStudentNumber();"
-            value="학번으로 로그인"
-            id="setButton"
-          />
-          <button
+          <a onclick="onStudentNumber();" id="setButton">학번으로 로그인</a>
+          <div class="go-register">
+            <p>계정이 없으십니까? </p>
+            <a
             class="goRegister"
-            onclick="location.href='/register-form.html'"
+            href="register-form.html"
           >
             회원가입
-          </button>
+          </a>
+          </div>
         </div>
       </div>
     </main>
@@ -94,11 +97,11 @@
         if (studentNumber.style.display == "none") {
           studentNumber.style.display = "block";
           id.style.display = "none";
-          btn.value = "ID로 로그인";
+          btn.innerHTML = "ID로 로그인";
         } else {
           studentNumber.style.display = "none";
           id.style.display = "block";
-          btn.value = "학번으로 로그인";
+          btn.innerHTML = "학번으로 로그인";
         }
       }
     </script>
