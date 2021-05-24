@@ -1,0 +1,239 @@
+.post_main {
+    margin-top: 130px;
+    margin-left:200px;
+    margin-right:200px;
+    padding-bottom: 200px;
+    background-color: white;
+    position: relative;
+    display:flex;
+}
+
+.post_title {
+    width: 100%;
+    height: 28px;
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    font-style: normal;
+    background-color: #d2d2d0;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.post_0 {
+    width: 100%;
+    background-color: white;
+}
+
+.post_1 {
+    width: 100%;
+    height: 46px;
+    background-color: white;
+    padding-top: 15px;
+    position: relative;
+    display:flex;
+}
+
+
+/* 제목 */
+.post_1 label {
+    color: #2c2c2a;
+    font-size: 14px;
+    font-weight: bolder;
+    position: absolute;
+    cursor: text;
+    padding-top: 8px;
+    padding-left: 25px;
+}
+
+#title_input {
+    width : 100%;
+    height: 5px;
+    line-height: normal;
+    padding: .8em .5em;
+    font-family: inherit;
+    border: 2px solid #babab9;
+    border-radius: 0;
+    margin-left: 110px;
+    margin-bottom: 15px;
+}
+
+.post_2{
+    width: 100%;
+    height: 46px;
+    background-color: white;
+    padding-top: 15px;
+    position: relative;
+    display:grid;
+    grid-template-columns: 110px 2fr 1fr 2fr;
+}
+
+/* 종류 */
+.type_input {
+    color: #2c2c2a;
+    font-size: 14px;
+    font-weight: bolder;
+    position: absolute;
+    cursor: text;
+    padding-top: 8px;
+    padding-left: 25px;
+}
+
+/* 모집기간 */
+.period_input{
+    color: #2c2c2a;
+    font-size: 14px;
+    font-weight: bolder;
+    position: absolute;
+    cursor: text;
+    padding-top: 8px;
+    padding-left: 25px;
+    display:flex;
+}
+.period_input_1{
+    width : 92.5%;
+    height: 5px;
+    line-height: normal;
+    font-family: inherit;
+    padding: .8em .5em;
+    border: 2px solid #babab9;
+    border-radius: 0;
+    margin-bottom: 15px;
+    margin-left: 14px;
+    display:flex;
+}
+.period_input_2{
+    width : 100%;
+    display:flex;
+}
+
+/* 내용 */
+.post_3{
+    width: 100%;
+    height: 350px;
+    background-color: white;
+    padding-top: 15px;
+    position: relative;
+    display:flex;
+}
+.post_3 label {
+    color: #2c2c2a;
+    font-size: 14px;
+    font-weight: bolder;
+    position: absolute;
+    cursor: text;
+    padding-top: 8px;
+    padding-left: 25px;
+}
+#content_input {
+    width : 100%;
+    height: 310px;
+    line-height: normal;
+    padding: .8em .5em;
+    font-family: inherit;
+    border: 2px solid #babab9;
+    border-radius: 0;
+    margin-left: 110px;
+    margin-bottom: 15px;
+}
+
+/* 이미지 */
+.post_4{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    padding-top: 15px;
+    position: relative;
+    display:flex;
+}
+.post_4 label {
+    color: #2c2c2a;
+    font-size: 14px;
+    font-weight: bolder;
+    position: absolute;
+    cursor: text;
+    padding-top: 8px;
+    padding-left: 25px;
+}
+#image_input {
+
+    margin-left: 110px;
+    margin-bottom: 15px;
+}
+
+/* 파일첨부 */
+.post_5{
+    width: 100%;
+    height: 160px;
+    background-color: white;
+    padding-top: 15px;
+    position: relative;
+    display:flex;
+}
+.post_5 label {
+    color: #2c2c2a;
+    font-size: 14px;
+    font-weight: bolder;
+    position: absolute;
+    cursor: text;
+    padding-top: 8px;
+    padding-left: 25px;
+}
+.post_6{
+    width: 100%;
+    height: 200px;
+    display:flex;
+}
+#file_input {
+    margin-left: 110px;
+    margin-bottom: 15px;
+    width:100%;
+}
+.drag_drop{
+    margin-left: 110px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 140px;
+    font-size: 12px;
+    color: #525250;
+    background-color: #ffffff;
+    display:block;
+    border: 2px solid #babab9;
+    text-align: center;
+    line-height: 140px;
+}
+
+/* 작성 버튼 */
+.post_7{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: relative;
+    display:flex;
+    justify-content: center;
+}
+
+.post_button{
+    margin-top: 40px;
+    display:flex;
+    align-items: center;
+    background-color: #071648;
+    color:white;
+    font-size: 13px;
+    height: 25px;
+}
+
+
+
+/*//////////////////////////////////////////////////////////*/
+
+@media(max-width: 850px){
+    .post_main {
+        margin-top: 30px;
+        margin-left:50px;
+        margin-right:50px;
+        padding-bottom: 40px;
+        background-color: white;
+        position: relative;
+    }
+}
