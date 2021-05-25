@@ -6,12 +6,8 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="Css/Login.css" />
-    <link rel="stylesheet" href="Css/Main.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
+    <link rel="stylesheet" href="../../Css/Login.css" />
+    <link rel="stylesheet" href="../../Css/Main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
@@ -23,9 +19,9 @@
           type: "POST",
           data: $("form").serialize(),
           success: function (result) {
-            if(result.result == "ok") {
+            if (result.result == "ok") {
               alert("가입을 축하합니다.");
-              location.href="login-form.html";
+              location.href = "login-form.html";
             } else {
               alert("회원가입 실패");
             }
@@ -35,7 +31,7 @@
     </script>
     <header>
       <div class="home-btn">
-        <a href="index.html" class="logo-stuDDingWithMe"></a>
+        <a href="../../index.html" class="logo-stuDDingWithMe"></a>
       </div>
     </header>
     <main>
@@ -105,10 +101,8 @@
         </div>
         <div class="login-footer">
           <div class="go-register isRegister">
-            <p>계정이 있으십니까? </p>
-            <a class="goRegister" href="login-form.html">
-            로그인
-          </a>
+            <p>계정이 있으십니까?</p>
+            <a class="goRegister" href="login-form.html"> 로그인 </a>
           </div>
         </div>
       </div>

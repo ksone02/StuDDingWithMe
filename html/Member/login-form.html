@@ -6,10 +6,10 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="Css/Login.css" />
-    <link rel="stylesheet" href="Css/Main.css" />
+    <link rel="stylesheet" href="../../Css/Login.css" />
+    <link rel="stylesheet" href="../../Css/Main.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./Js/LoginCheck.js"></script>
+    <script src="../../Js/LoginCheck.js"></script>
   </head>
   <body>
     <script type="text/javascript">
@@ -20,10 +20,10 @@
           data: $("form").serialize(),
           dataType: "json",
           success: function (result) {
-            if(result.result == "ok") {
+            if (result.result == "ok") {
               alert("로그인 성공");
               alert(result.id);
-              location.href="index.html";
+              location.href = "index.html";
             } else {
               alert("로그인 실패");
             }
@@ -33,7 +33,7 @@
     </script>
     <header>
       <div class="home-btn">
-        <a href="index.html" class="logo-stuDDingWithMe"></a>
+        <a href="../../index.html" class="logo-stuDDingWithMe"></a>
       </div>
     </header>
     <main>
@@ -68,20 +68,20 @@
               />
             </div>
             <div class="login-submit">
-              <input type="button" value="로그인" onclick="login();" class="login-submit-btn"/>
+              <input
+                type="button"
+                value="로그인"
+                onclick="login();"
+                class="login-submit-btn"
+              />
             </div>
           </form>
         </div>
         <div class="login-footer">
           <a onclick="onStudentNumber();" id="setButton">학번으로 로그인</a>
           <div class="go-register">
-            <p>계정이 없으십니까? </p>
-            <a
-            class="goRegister"
-            href="register-form.html"
-          >
-            회원가입
-          </a>
+            <p>계정이 없으십니까?</p>
+            <a class="goRegister" href="register-form.html"> 회원가입 </a>
           </div>
         </div>
       </div>
