@@ -1,0 +1,165 @@
+/*여니 추가*/
+.nav-list-wrap-study {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 16px 0 rgba(0 0 0 / 16%);
+    height: 700px;
+    margin-bottom: 80px;
+    margin-left: 50px;
+    margin-right: 80px;
+    justify-content: center;
+}
+
+.study-main-1 {
+    background-color: #fafbfc;
+    display: flex;
+    width : 92%;
+    height: 80px;
+    position: relative;
+    left: 50px;
+    top: 20px;
+
+}
+
+.study-main-2 {
+    background-color: #ffffff;
+    display: flex;
+    width : 80%;
+    height: 60px;
+    position: relative;
+    left: 120px;
+    top: 50px;
+    border: solid 2px #dfdfdc;
+
+}
+.study-main-3 {
+    background-color: #ffffff;
+    display: flex;
+    width : 80%;
+    height: 30px;
+    position: relative;
+    left: 20px;
+    top: 20px;
+
+}
+.study-main-4 {
+    width : 200%;
+    height: 20px;
+    border: 1px solid #333431;
+    background: #ffffff;
+    display: inline-block;
+}
+.study-main-5 {
+    background-color: #ffffff;
+    display: flex;
+    width : 80%;
+    height: 30px;
+    position: relative;
+    left: 110px;
+    top: 70px;
+}
+.study-main-6 {
+    display: flex;
+    width : 80%;
+    height: 30px;
+    position: relative;
+    left: 110px;
+    top: 340px;
+}
+.study-main-7 {
+    display: flex;
+    width : 80%;
+    height: 30px;
+    position: relative;
+    left: 1025px;
+    padding-right: 6px;
+}
+
+/* pagination */
+
+.study-main-8 {
+    display: flex;
+    width : 80%;
+    height: 30px;
+    position: relative;
+    left: 350px;
+    top: 380px;
+    text-align : center;
+    width : 50%;
+}
+.pagination{
+    list-style:none;
+    display: inline-block;
+    padding:0;
+    margin-top:20px;
+}
+
+.pagination li{
+    display:inline; /* 세로형 -> 가로형 */
+    text-align:center;
+}
+
+.pagination a{
+    float: left;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 5px 12px;
+    color: #96a0ad;
+    line-height: 1.5;
+}
+
+.first{
+    margin-right: 15px;
+}
+
+.last{
+    margin-left:15px;
+}
+
+/* hover: 마우스 오버했을 때 스타일 지정, active: 클릭했을 때 스타일지정 */
+.first:hover , .last:hover, .left:hover, .right:hover{
+    color: dimgrey;
+}
+
+.pagination a.active{
+    cursor: default;
+    color:dimgray;
+}
+
+.pagination a.active{
+    outline:none;
+}
+
+.modal .num{
+    margin-left: 3px;
+    padding:0;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    /* 네모가 아닌 동그라미로 모양 바뀜
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+     */
+}
+
+.modal .num:hover {
+    border: 2px solid grey;
+    color: #525250;
+}
+
+.modal .num.active, .modal .num:active {
+    border: 2px solid grey;
+    color: #525250;
+    cursor: pointer;
+}
+
+.arrow-left {
+    width: 0;
+    heigth: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid blue;
+}
+/**/

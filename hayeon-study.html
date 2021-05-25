@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:border-bottom-color="http://www.w3.org/1999/xhtml" xmlns:cursor="http://www.w3.org/1999/xhtml"
-      xmlns:padding-left="http://www.w3.org/1999/xhtml">
+      xmlns:padding-left="http://www.w3.org/1999/xhtml" xmlns:color="http://www.w3.org/1999/xhtml"
+      xmlns:font-color="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,12 +20,13 @@
     ></script>
     <style>
         td {
-            border: none;
+            border: 1px solid #b6b6b3;
             border-collapse: collapse;
             text-align: center;
-            background-color: lavender;
+            background-color: #ffffff;
             height: 25px;
             font-size: 14px;
+            border-collapse: collapse;
         }
     </style>
 </head>
@@ -176,7 +178,7 @@
     </div>
     </header>
     <div class="center">
-        <link rel="stylesheet" href="MainContent.css" />
+        <link rel="stylesheet" href="Css/MainContent.css" />
         <main class="main">
             <section class="study-main">
                 <div class="study-main-contents">
@@ -282,197 +284,230 @@
     <nav class ="nav">
         <link rel="stylesheet" href="Css/MainContent.css" />
         <ul class="nav-list-wrap-study">
-            <div class="study-main">
+            <div class="study-main-1">
                 <div class = "study-main-contents">
-                    <br>
-                    <br>
                     <h3 class = "main-title">전체 게시글</h3>
                     <h5 class="main-subTitle" >최근에 등록된 스터디 목록입니다.</h5>
                     <br>
                     <h3 style="border-bottom:1px solid dimgray";> </h3>
-                    <br>
-                <div id = "content_text">
-                    <div class ="project" style="margin-bottom:10px;">
-
+                </div>
+            </div>
+            <div class="study-main-2">
+                <div class="study-main-3">
+                    <p style="font-size: 14px; padding-right: 4px; font-family: Consolas, sans-serif"><input type="date"></p>
+                    <h3> - </h3>
+                    <p style="font-size: 14px; padding-left: 4px; font-family: Consolas, sans-serif"><input type="date"></p>
+                    <form style="padding-left: 400px;">
+                        <select>
+                            <option>10</option>
+                            <option>9</option>
+                            <option>8</option>
+                            <option>7</option>
+                            <option>6</option>
+                            <option>5</option>
+                            <option>4</option>
+                            <option>3</option>
+                            <option>2</option>
+                            <option>1</option>
+                        </select>
+                    </form>
+                    <form style="padding-left: 6px; padding-right:6px;">
+                        <select>
+                            <option>선택</option>
+                            <option>순번</option>
+                            <option>제목</option>
+                            <option>작성자</option>
+                            <option>작성일</option>
+                            <option>조회수</option>
+                        </select>
+                    </form>
+                    <div class="study-main-4">
+                        <input style ="font-size: 12px; width: 125px; padding: 1px; border: 0px; outline:none; float:left;" type="text" placeholder ="검색어 입력">
                     </div>
-                        <div id="report_list">
-                            <table class="bbslist new_bbslist" border="1" summary="과제물 게시판 목록(제목, 마감일,지각제출, 점수, 상태, 항목" style="width: 1200px; border:none;">
-                                <colgroup>
-                                    <col style="width:70px;">
-                                    <col style="width:35px;">
-                                    <col style="width:120px;">
-                                    <col style="width:120px;">
-                                    <col style="width:260px;">
-                                    <col style="width:60px;">
-                                    <col style="width:70px;">
-                                    <col style="width:70px;">
-                                    <col style="width:142px;">
-                                    <col style="width:70px;">
-                                    <col style="width:60px;">
-                                </colgroup>
-                                <thead>
-                                <tr style="height:26px; text-align:center; font-size: 15px; background-color:#071648; color:white;">
-                                    <th scope="col">즐겨찾기</th>
-                                    <th scope="col">번호</th>
-                                    <th scope="col">스터디이름</th>
-                                    <th scope="col">스터디종류</th>
-                                    <th scope="col">상세설명</th>
-                                    <th scope="col">장소</th>
-                                    <th scope="col">제한인원</th>
-                                    <th scope="col">현재인원</th>
-                                    <th scope="col">마감일</th>
-                                    <th scope="col">신청가능</th>
-                                    <th scope="col">체크란</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr style="cursor:pointer;">
-                                    <td class="center impt impt_off" title="중요글 추가" impt_seq="3993816"></td>
-                                    <td >10</td>
-                                    <td>C++스터디</td>
-                                    <td>코딩</td>
-                                    <td style="font-size:13px">하드웨어 설계 및 C++ 기본 문법을 모두 잡을수 있는!!</td>
-                                    <td style="font-size:13px">명진당 3층</td>
-                                    <td >5</td>
-                                    <td>3</td>
-                                    <td >21.07.07</td>
-                                    <td >가능</td>
-                                    <td style="background-color: forestgreen"><input type="checkbox" name="chk_info" value="check"></td>
-                                </tr>
-                                <tr style="cursor:pointer;">
-                                    <td class="center impt impt_off" title="중요글 추가" impt_seq="3993816"></td>
-                                    <td >9</td>
-                                    <td>토익스터디</td>
-                                    <td>외국어</td>
-                                    <td style="font-size:13px">토익 900점 가기 프로젝트 ㅠㅠㅠ</td>
-                                    <td style="font-size:13px">3공학관 5층</td>
-                                    <td >4</td>
-                                    <td>3</td>
-                                    <td >21.07.07</td>
-                                    <td >가능</td>
-                                    <td style="background-color: forestgreen"><input type="checkbox" name="chk_info" value="check"></td>
-                                </tr>
-                                <tr style="cursor:pointer;">
-                                    <td class="center impt impt_off" title="중요글 추가" impt_seq="3993816"></td>
-                                    <td >8</td>
-                                    <td>Zoom 자율 스터디</td>
-                                    <td>코딩</td>
-                                    <td style="font-size:13px">정보통신공학과 Python 스터디!</td>
-                                    <td style="font-size:13px">비대면</td>
-                                    <td >40</td>
-                                    <td>25</td>
-                                    <td >21.06.16</td>
-                                    <td >가능</td>
-                                    <td style="background-color: forestgreen"><input type="checkbox" name="chk_info" value="check"></td>
-                                </tr>
-                                <tr style="cursor:pointer;">
-                                    <td class="center impt impt_off" title="중요글 추가" impt_seq="3993816"></td>
-                                    <td >7</td>
-                                    <td>공무원스터디</td>
-                                    <td>취업</td>
-                                    <td style="font-size:13px">9급공무원 시험준비!!</td>
-                                    <td style="font-size:13px">투썸플레이스</td>
-                                    <td >4</td>
-                                    <td>4</td>
-                                    <td >21.05.22</td>
-                                    <td style="background-color: firebrick">마감</td>
-                                    <td >
-                                    </td>
-                                </tr>
-                                <tr style="cursor:pointer;">
-                                    <td class="center impt impt_off" title="중요글 추가" impt_seq="3993816"></td>
-                                    <td >6</td>
-                                    <td>인공지능스터디</td>
-                                    <td>코딩</td>
-                                    <td style="font-size:13px">딥러닝을 이용한 얼굴인식 데이터를 뽑아보기</td>
-                                    <td style="font-size:13px">비대면 zoom</td>
-                                    <td >25</td>
-                                    <td>25</td>
-                                    <td >21.11.11</td>
-                                    <td style="background-color: firebrick">마감</td>
-                                    <td ></td>
-                                </tr>
-                                <tr style="cursor:pointer;" >
-                                    <td class="center impt impt_off" title="중요글 추가" impt_seq="3993816" style="background-color: darkgray"></td>
-                                    <td style="background-color: darkgray">5</td>
-                                    <td style="background-color: darkgray">피아노스터디</td>
-                                    <td style="background-color: darkgray">음악</td>
-                                    <td style="font-size:13px; background-color: darkgray;">지덕체를 겸비한 사람이 될 수 있는!</td>
-                                    <td style="font-size:13px; background-color: darkgray;">명진당 3층</td>
-                                    <td style="background-color: darkgray">5</td>
-                                    <td style="background-color: darkgray">3</td>
-                                    <td style="background-color: darkgray" >21.05.05</td>
-                                    <td style="background-color: darkgray">종료</td>
-                                    <td style="background-color: darkgray"></td>
-                                </tr>
-                                <tr style="cursor:pointer;">
-                                    <td class="center impt impt_off" title="중요글 추가" impt_seq="3993816"></td>
-                                    <td >4</td>
-                                    <td>Django스터디</td>
-                                    <td>코딩</td>
-                                    <td style="font-size:13px">웹 마스터를 위한 Django스터디 입니다.</td>
-                                    <td style="font-size:13px">경기도 군포시</td>
-                                    <td >4</td>
-                                    <td>3</td>
-                                    <td >21.06.06</td>
-                                    <td >가능</td>
-                                    <td style="background-color: forestgreen"><input type="checkbox" name="chk_info" value="check"></td>
-                                </tr>
-                                <tr style="cursor:pointer;">
-                                    <td class="center impt impt_off" title="중요글 추가" impt_seq="3993816"></td>
-                                    <td >3</td>
-                                    <td>C언어스터디</td>
-                                    <td>코딩</td>
-                                    <td style="font-size:13px">포인터, 배열, 메모리, 함수 모두 공부할 수 있는 기회</td>
-                                    <td style="font-size:13px">비대면 zoom</td>
-                                    <td >10</td>
-                                    <td>10</td>
-                                    <td >21.07.07</td>
-                                    <td style="background-color: firebrick">마감</td>
-                                    <td ></td>
-                                </tr>
-                                <tr style="cursor:pointer;">
-                                    <td class="center impt impt_off" title="중요글 추가" impt_seq="3993816"></td>
-                                    <td >2</td>
-                                    <td>면접스터디</td>
-                                    <td>취업</td>
-                                    <td style="font-size:13px">취업합시다 모두!</td>
-                                    <td style="font-size:13px">비대면 Teams</td>
-                                    <td >15</td>
-                                    <td>3</td>
-                                    <td >21.08.03</td>
-                                    <td >가능</td>
-                                    <td style="background-color: forestgreen"><input type="checkbox" name="chk_info" value="check"></td>
-                                </tr>
-                                <tr style="cursor:pointer;">
-                                    <td class="center impt impt_off" title="중요글 추가" impt_seq="3993816"></td>
-                                    <td >1</td>
-                                    <td>미적분스터디</td>
-                                    <td>수학</td>
-                                    <td style="font-size:13px">미적분 A+를 향해,,, </td>
-                                    <td style="font-size:13px">명진당 3층</td>
-                                    <td >5</td>
-                                    <td>3</td>
-                                    <td >21.05.30</td>
-                                    <td >가능</td>
-                                    <td style="background-color: forestgreen"><input type="checkbox" name="chk_info" value="check"></td>
-                                </tr>
-                                </tbody>
-                            </table>
-                            <br>
-                            <li class="nav-list main-search" style="align-items: center">
-                                <form class="nav-search-form" >
-                                    <input
-                                            type="text"
-                                            maxlength="20"
-                                            placeholder="검색"
-                                            class="nav-search"
-                                    />
-                                </form>
-                            </li>
-                        </div>
+                    <div>
+                        <button style="width: 60px; height:75%; border: 0px; background: #333431; outline: none; float: right; color:#ffffff; font-size: 14px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 114.439 110.478">
+                            <path id="search" d="M79.227,46.742a28.157,28.157,0,0,0-9.044-21.012A30.225,30.225,0,0,0,48.417,17a30.208,30.208,0,0,0-21.769,8.731A28.152,28.152,0,0,0,17.6,46.742a28.173,28.173,0,0,0,9.044,21.012,30.211,30.211,0,0,0,21.769,8.731,30.2,30.2,0,0,0,21.766-8.731A28.189,28.189,0,0,0,79.227,46.742Zm35.212,55.239a8.03,8.03,0,0,1-2.613,5.975,8.611,8.611,0,0,1-6.189,2.523,8.318,8.318,0,0,1-6.189-2.523L75.857,85.249a48.278,48.278,0,0,1-27.44,8.234A49.034,49.034,0,0,1,29.608,89.8a48.609,48.609,0,0,1-15.475-9.958A46.593,46.593,0,0,1,3.818,64.9a45.091,45.091,0,0,1,0-36.317A46.728,46.728,0,0,1,14.133,13.644,48.515,48.515,0,0,1,29.608,3.686a49.838,49.838,0,0,1,37.619,0A48.515,48.515,0,0,1,82.7,13.644,46.728,46.728,0,0,1,93.017,28.583a45.28,45.28,0,0,1-4.711,44.649L111.9,96.006A7.992,7.992,0,0,1,114.439,101.981Z" fill="#fff"/>
+                        </svg>검색</button>
                     </div>
                 </div>
+            </div>
+            <div class="study-main-5">
+                <table class="bbslist new_bbslist" border="1" summary="과제물 게시판 목록(제목, 마감일,지각제출, 점수, 상태, 항목" style="width: 1110px; border:none; border-collapse:collapse; border-top:2px solid gray; border-bottom: 1px solid #b6b6b3;">
+                    <colgroup>
+                        <col style="width:70px;">
+                        <col style="width:90px;">
+                        <col style="width:130px;">
+                        <col style="width:80px;">
+                        <col style="width:60px;">
+                        <col style="width:142px;">
+                        <col style="width:70px;">
+                    </colgroup>
+                    <thead>
+                    <tr style="height:26px; text-align:center; font-size: 14px; background-color:#ededec; color:black; border: 1px solid #b6b6b3;">
+                        <th scope="col">즐겨찾기</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">스터디종류</th>
+                        <th scope="col">작성자</th>
+                        <th scope="col">모집현황</th>
+                        <th scope="col">모집기간</th>
+                        <th scope="col">조회수</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr style="cursor:pointer;">
+                        <td ><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 69.18 67.72">
+                            <g id="star-fill" transform="translate(-0.003 -1.123)">
+                                <path id="패스_2" data-name="패스 2" d="M15.615,68.586a2.323,2.323,0,0,1-3.227-2.673l3.588-21.354L.745,29.409a2.544,2.544,0,0,1,1.224-4.288l21.177-3.142L32.589,2.445a2.181,2.181,0,0,1,4.009,0l9.443,19.534,21.177,3.142a2.545,2.545,0,0,1,1.224,4.288L53.209,44.559,56.8,65.913a2.323,2.323,0,0,1-3.227,2.673L34.587,58.4,15.611,68.586Z" transform="translate(0 0)" fill="#7a7575"/>
+                            </g>
+                        </svg>
+                        </td>
+                        <td >C++스터디</td>
+                        <td>코딩</td>
+                        <td>강상원</td>
+                        <td style="font-size:13px">모집중</td>
+                        <td style="font-size:13px">2021.05.15-2021.08.15</td>
+                        <td >5</td>
+                    </tr>
+                    <tr style="cursor:pointer;">
+                        <td ><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 69.18 67.72">
+                            <g id="star-fill" transform="translate(-0.003 -1.123)">
+                                <path id="패스_2" data-name="패스 2" d="M15.615,68.586a2.323,2.323,0,0,1-3.227-2.673l3.588-21.354L.745,29.409a2.544,2.544,0,0,1,1.224-4.288l21.177-3.142L32.589,2.445a2.181,2.181,0,0,1,4.009,0l9.443,19.534,21.177,3.142a2.545,2.545,0,0,1,1.224,4.288L53.209,44.559,56.8,65.913a2.323,2.323,0,0,1-3.227,2.673L34.587,58.4,15.611,68.586Z" transform="translate(0 0)" fill="#7a7575"/>
+                            </g>
+                        </svg>
+                        </td>
+                        <td >토익스터디</td>
+                        <td>외국어</td>
+                        <td>박철수</td>
+                        <td style="font-size:13px">모집마감</td>
+                        <td style="font-size:13px">2021.03.24-2021.05.05</td>
+                        <td >4</td>
+                    </tr>
+                    <tr style="cursor:pointer;">
+                        <td ><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 69.18 67.72">
+                            <g id="star-fill" transform="translate(-0.003 -1.123)">
+                                <path id="패스_2" data-name="패스 2" d="M15.615,68.586a2.323,2.323,0,0,1-3.227-2.673l3.588-21.354L.745,29.409a2.544,2.544,0,0,1,1.224-4.288l21.177-3.142L32.589,2.445a2.181,2.181,0,0,1,4.009,0l9.443,19.534,21.177,3.142a2.545,2.545,0,0,1,1.224,4.288L53.209,44.559,56.8,65.913a2.323,2.323,0,0,1-3.227,2.673L34.587,58.4,15.611,68.586Z" transform="translate(0 0)" fill="#7a7575"/>
+                            </g>
+                        </svg>
+                        </td>
+                        <td >Zoom 자율 스터디</td>
+                        <td>기타</td>
+                        <td>김순자</td>
+                        <td style="font-size:13px">모집마감</td>
+                        <td style="font-size:13px">2021.04.03-2021.05.31</td>
+                        <td >40</td>
+                    </tr>
+                    <tr style="cursor:pointer;">
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 69.18 67.72">
+                            <g id="star-fill" transform="translate(-0.003 -1.123)">
+                                <path id="패스_2" data-name="패스 2" d="M15.615,68.586a2.323,2.323,0,0,1-3.227-2.673l3.588-21.354L.745,29.409a2.544,2.544,0,0,1,1.224-4.288l21.177-3.142L32.589,2.445a2.181,2.181,0,0,1,4.009,0l9.443,19.534,21.177,3.142a2.545,2.545,0,0,1,1.224,4.288L53.209,44.559,56.8,65.913a2.323,2.323,0,0,1-3.227,2.673L34.587,58.4,15.611,68.586Z" transform="translate(0 0)" fill="#f2d025"/>
+                            </g>
+                        </svg>
+                        </td>
+                        <td >공무원스터디</td>
+                        <td>취업</td>
+                        <td>박정준</td>
+                        <td style="font-size:13px">모집중</td>
+                        <td style="font-size:13px">2021.06.01-2021.10.01</td>
+                        <td >4</td>
+                    </tr>
+                    <tr style="cursor:pointer;">
+                        <td ><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 69.18 67.72">
+                            <g id="star-fill" transform="translate(-0.003 -1.123)">
+                                <path id="패스_2" data-name="패스 2" d="M15.615,68.586a2.323,2.323,0,0,1-3.227-2.673l3.588-21.354L.745,29.409a2.544,2.544,0,0,1,1.224-4.288l21.177-3.142L32.589,2.445a2.181,2.181,0,0,1,4.009,0l9.443,19.534,21.177,3.142a2.545,2.545,0,0,1,1.224,4.288L53.209,44.559,56.8,65.913a2.323,2.323,0,0,1-3.227,2.673L34.587,58.4,15.611,68.586Z" transform="translate(0 0)" fill="#7a7575"/>
+                            </g>
+                        </svg>
+                        </td>
+                        <td >인공지능스터디</td>
+                        <td>코딩</td>
+                        <td>홍길동</td>
+                        <td style="font-size:13px">모집마감</td>
+                        <td style="font-size:13px">2021.03.02-2021.04.28</td>
+                        <td >25</td>
+                    </tr>
+                    <tr style="cursor:pointer;">
+                        <td ><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 69.18 67.72">
+                            <g id="star-fill" transform="translate(-0.003 -1.123)">
+                                <path id="패스_2" data-name="패스 2" d="M15.615,68.586a2.323,2.323,0,0,1-3.227-2.673l3.588-21.354L.745,29.409a2.544,2.544,0,0,1,1.224-4.288l21.177-3.142L32.589,2.445a2.181,2.181,0,0,1,4.009,0l9.443,19.534,21.177,3.142a2.545,2.545,0,0,1,1.224,4.288L53.209,44.559,56.8,65.913a2.323,2.323,0,0,1-3.227,2.673L34.587,58.4,15.611,68.586Z" transform="translate(0 0)" fill="#7a7575"/>
+                            </g>
+                        </svg>
+                        </td>
+                        <td >Django스터디</td>
+                        <td>코딩</td>
+                        <td>박지훈</td>
+                        <td style="font-size:13px">모집중</td>
+                        <td style="font-size:13px">2021.05.21-2021.08.03</td>
+                        <td >4</td>
+                    </tr>
+                    <tr style="cursor:pointer;">
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 69.18 67.72">
+                            <g id="star-fill" transform="translate(-0.003 -1.123)">
+                                <path id="패스_2" data-name="패스 2" d="M15.615,68.586a2.323,2.323,0,0,1-3.227-2.673l3.588-21.354L.745,29.409a2.544,2.544,0,0,1,1.224-4.288l21.177-3.142L32.589,2.445a2.181,2.181,0,0,1,4.009,0l9.443,19.534,21.177,3.142a2.545,2.545,0,0,1,1.224,4.288L53.209,44.559,56.8,65.913a2.323,2.323,0,0,1-3.227,2.673L34.587,58.4,15.611,68.586Z" transform="translate(0 0)" fill="#f2d025"/>
+                            </g>
+                        </svg>
+                        </td>
+                        <td >C언어스터디</td>
+                        <td>코딩</td>
+                        <td>김주림</td>
+                        <td style="font-size:13px">모집중</td>
+                        <td style="font-size:13px">2021.05.01-2021.12.25</td>
+                        <td >10</td>
+                    </tr>
+                    <tr style="cursor:pointer;">
+                        <td><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 69.18 67.72">
+                            <g id="star-fill" transform="translate(-0.003 -1.123)">
+                                <path id="패스_2" data-name="패스 2" d="M15.615,68.586a2.323,2.323,0,0,1-3.227-2.673l3.588-21.354L.745,29.409a2.544,2.544,0,0,1,1.224-4.288l21.177-3.142L32.589,2.445a2.181,2.181,0,0,1,4.009,0l9.443,19.534,21.177,3.142a2.545,2.545,0,0,1,1.224,4.288L53.209,44.559,56.8,65.913a2.323,2.323,0,0,1-3.227,2.673L34.587,58.4,15.611,68.586Z" transform="translate(0 0)" fill="#f2d025"/>
+                            </g>
+                        </svg>
+                        </td>
+                        <td >면접스터디</td>
+                        <td>취업</td>
+                        <td>김세현</td>
+                        <td style="font-size:13px">모집중</td>
+                        <td style="font-size:13px">2021.05.22-2021.6.22</td>
+                        <td >15</td>
+                    </tr>
+                    <tr style="cursor:pointer;">
+                        <td ><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 69.18 67.72">
+                            <g id="star-fill" transform="translate(-0.003 -1.123)">
+                                <path id="패스_2" data-name="패스 2" d="M15.615,68.586a2.323,2.323,0,0,1-3.227-2.673l3.588-21.354L.745,29.409a2.544,2.544,0,0,1,1.224-4.288l21.177-3.142L32.589,2.445a2.181,2.181,0,0,1,4.009,0l9.443,19.534,21.177,3.142a2.545,2.545,0,0,1,1.224,4.288L53.209,44.559,56.8,65.913a2.323,2.323,0,0,1-3.227,2.673L34.587,58.4,15.611,68.586Z" transform="translate(0 0)" fill="#7a7575"/>
+                            </g>
+                        </svg>
+                        </td>
+                        <td>미적분스터디</td>
+                        <td>수학</td>
+                        <td>강하연</td>
+                        <td style="font-size:13px">모집마감</td>
+                        <td style="font-size:13px">2021.06.01-2021.07.30</td>
+                        <td >5</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+                <div class="study-main-6">
+                    <div class="study-main-7">
+
+                            <button style="border:none; background: #071648; font-size: 13px; color:white; width: 80px;">글쓰기</button>
+
+                    </div>
+                </div>
+            <div class = "study-main-8">
+                <ul class="pagination modal">
+                    <li> <a href="#" class="first">처음페이지</a></li>
+                    <li> <a href="#" class="arrow left"><<</a></li>
+                    <li> <a href="#" class="active num">1</a></li>
+                    <li> <a href="#" class="num">2</a></li>
+                    <li> <a href="#" class="num">3</a></li>
+                    <li> <a href="#" class="num">4</a></li>
+                    <li> <a href="#" class="num">5</a></li>
+                    <li> <a href="#" class="num">6</a></li>
+                    <li> <a href="#" class="num">7</a></li>
+                    <li> <a href="#" class="num">8</a></li>
+                    <li> <a href="#" class="num">9</a></li>
+                    <li> <a href="#" class="num">10</a></li>
+                    <li> <a href="#" class="arrow right">>></a></li>
+                    <li> <a href="#" class="last">끝 페이지</a></li>
+                </ul>
             </div>
         </ul>
     </nav>
