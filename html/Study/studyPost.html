@@ -21,7 +21,7 @@
     ></script>
     <style>
         h3{
-            border-bottom:2px solid #d2d2d0;
+            border-bottom:2px solid #b3b3a9;
         }
     </style>
 </head>
@@ -44,7 +44,7 @@
         <nav class="nav">
           <ul class="nav-list-wrap">
             <li class="nav-list">
-              <a href="Study/hayeon-study.html">
+              <a href="./studyBoard.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="55"
@@ -75,7 +75,7 @@
               </a>
             </li>
             <li class="nav-list">
-              <a href="../Contest/jurim-contest.html">
+              <a href="../Contest/contestBoard.html">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="55"
@@ -112,7 +112,7 @@
               </a>
             </li>
             <li class="nav-list">
-              <a href="../ExternalActivity/sehyun-ExternalActivity.html">
+              <a href="../ExternalActivity/EA_Board_1.html">
                 <svg
                   id="calendar-event"
                   xmlns="http://www.w3.org/2000/svg"
@@ -180,42 +180,40 @@
                 </div>
                 <div class="post_1">
                     <label for="title_input">제목</label>
-                    <input type="text" id="title_input">
+                    <input type="text" name="title_input" id="title_input">
                 </div>
                 <h3> </h3>
                 <div class="post_2">
                     <div>
                         <p class="type_input">종류</p>
                     </div>
-                    <form>
-                        <select style="border: 2px solid #babab9; width: 100%; outline-style:none; height:30px;">
+                        <select name="check" style="border: 2px solid #babab9; width: 100%; outline-style:none; height:30px;">
                             <option selected disabled value="">선택</option>
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option>0</option>
-                            <option>0</option>
-                            <option>0</option>
-                            <option>0</option>
+                            <option>코딩</option>
+                            <option>인문학</option>
+                            <option>취업 준비</option>
+                            <option>공무원</option>
+                            <option>어학</option>
+                            <option>기타</option>
                         </select>
-                    </form>
                     <div class="period_input_2">
                         <p class="period_input">모집기간</p>
                     </div>
                     <div class="period_input_2">
-                        <input type="date" class="period_input_1"></input>
+                        <input type="date" name = "period_input" class="period_input_1">
                     </div>
                 </div>
                 <h3> </h3>
                 <div class="post_3">
                     <label for="content_input">내용</label>
-                    <input type="text" id="content_input">
+                    <input type="text" name = "content_input" id="content_input">
                 </div>
                 <h3> </h3>
                 <div class="post_4">
                     <label for="image_input">이미지</label>
-                    <input type="file" id="image_input" accept="image/*">
+                    <input type="file" name = "image_input" id="image_input" accept="image/*">
                     <div>
-                        <input type="image" id="image" alt="type_image" src="../../Img/study1.jpg" style=" width: 110px; height: 150px; object-fit: cover; transition: .2s ease-out; border: 2px solid #72726d">
+                        <img  name = "image" id="image" alt="type_image" src="../../Img/study1.jpg" style=" width: 110px; height: 150px; object-fit: cover; transition: .2s ease-out; border: 2px solid #72726d">
                     </div>
                 </div>
                 <h3> </h3>
@@ -223,7 +221,7 @@
                     <label for="file_input">파일첨부</label>
                     <div class="post_6">
                         <div>
-                            <input type="file" id="file_input" multiple accept=".docx, .pdf, .pptx, .py, .c , .html , .css, .js, image/*, .doc, .ppt">
+                            <input type="file" name = "file_input" id="file_input" multiple accept=".docx, .pdf, .pptx, .py, .c , .html , .css, .js, image/*, .doc, .ppt">
                         </div>
                         <div class="drag_drop">
                             여러개의 파일을 마우스로 끌어놓으세요.
@@ -232,8 +230,11 @@
                 </div>
                 <h3> </h3>
                 <div class="post_7">
-                    <button class="post_button">작성</button>
+                    <input type="button" class="post_button" value="작성" onclick="prepareSubmit()">
                 </div>
+
+                <input type="hidden" name = "currentTime">
+                <input type="hidden" name = "id">
             </form>
         </div>
     </main>
@@ -253,5 +254,57 @@
             </ul>
         </div>
     </footer>
+    <script src="../../Js/ajaxLogin.js"></script>
+    <script>
+      ajaxLogined();
+
+      var id = document.getElementsByName("id")[0];
+      var currentTime = document.getElementsByName("currentTime")[0];
+
+      function prepareSubmit(){
+        id.value = User_id; // 임의 고정 해둠 , 추후 쿠키에서 id 값 가져올 것.
+        currentTime.value = getTimeStamp(); // 글 등록 시간을 얻어오기 위함.
+
+        $.ajax({
+          url: "../../study_post",
+          type: "POST",
+          data: $("form").serialize(),
+          success: function (result) {
+            if (result.result == "ok") {
+              alert("게시글이 등록되었습니다.");
+              location.href = "studyBoard.html";
+            } else {
+              alert("게시글이 등록 실패하였습니다");
+            }
+          },
+        });
+      }
+
+      function getTimeStamp() {
+        var d = new Date();
+
+        var s =
+          leadingZeros(d.getFullYear(), 4) + '-' +
+          leadingZeros(d.getMonth() + 1, 2) + '-' +
+          leadingZeros(d.getDate(), 2) + ' ' +
+
+          leadingZeros(d.getHours(), 2) + ':' +
+          leadingZeros(d.getMinutes(), 2) + ':' +
+          leadingZeros(d.getSeconds(), 2);
+
+        return s;
+      }
+
+      function leadingZeros(n, digits) {
+        var zero = '';
+        n = n.toString();
+
+        if (n.length < digits) {
+          for (i = 0; i < digits - n.length; i++)
+            zero += '0';
+        }
+        return zero + n;
+      }
+    </script>
 </body>
 </html>

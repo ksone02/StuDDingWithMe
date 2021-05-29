@@ -1,0 +1,116 @@
+a{
+    text-decoration: none;
+  }
+  
+  #search{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: gray 1px solid;
+    
+  }
+
+  #button-list{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 2%;
+    justify-content: space-between;
+    
+  }
+
+  .search-form{
+    border:1px solid gray;
+    padding:1%
+    
+  }
+ 
+  .search-list{
+    display: inline-block;
+    align-items: center;
+  }
+
+  button {
+  background-color: rgb(172, 169, 169);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  }
+
+  table{
+    margin-top: 2%;
+    width: 100%;
+    border-collapse: collapse;
+    line-height: 24px;
+  }
+
+  table td,th {
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    text-align: center;
+    padding: 10px;
+  }
+  th {
+    background: rgb(221, 221, 221);
+  }
+
+  #edit{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 1%;
+    justify-content: flex-end;
+  }
+
+  .page{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  /* pagination */
+
+  .study-main-8 {
+      display: flex;
+      width : 80%;
+      height: 30px;
+      position: relative;
+      left: 350px;
+      top: 380px;
+      text-align : center;
+      width : 50%;
+  }
+  .pagination{
+      list-style:none;
+      display: inline-block;
+      padding:0;
+      margin-top:20px;
+  }
+
+  .pagination li{
+      display:inline; /* 세로형 -> 가로형 */
+      text-align:center;
+  }
+
+  .pagination a{
+      float: left;
+      display: block;
+      font-size: 14px;
+      text-decoration: none;
+      padding: 5px 12px;
+      color: #96a0ad;
+      line-height: 1.5;
+  }
+
+  .first{
+      margin-right: 15px;
+  }
+
+  .last{
+      margin-left:15px;
+  }

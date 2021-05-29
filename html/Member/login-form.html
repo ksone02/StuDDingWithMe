@@ -15,15 +15,14 @@
     <script type="text/javascript">
       function login() {
         $.ajax({
-          url: "./login",
+          url: "../../login",
           type: "POST",
           data: $("form").serialize(),
           dataType: "json",
           success: function (result) {
             if (result.result == "ok") {
-              alert("로그인 성공");
-              alert(result.id);
-              location.href = "index.html";
+              alert("로그인 성공 UserId: "+result.id);
+              location.href = "../../index.html";
             } else {
               alert("로그인 실패");
             }

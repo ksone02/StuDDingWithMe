@@ -34,6 +34,7 @@
     font-weight: 700;
     font-family: notoBold;
     color: black;
+    margin-top: 80px;
 }
 
 .main-subTitle {
@@ -41,6 +42,7 @@
     font-weight: 100;
     color: #737373;
     padding-top: 10px;
+    margin-bottom: 10px;
 }
 
 .study-main-body {
@@ -237,6 +239,7 @@
 
 .classmate-main-body {
     margin-top: 10px;
+    margin-bottom: 100px;
 }
 
 
@@ -373,7 +376,7 @@
     .main-title {
         font-family: notoMedium;
     }
-
+    
     .study-item-txt-subTitle {
         font-size: 12px;
     }
