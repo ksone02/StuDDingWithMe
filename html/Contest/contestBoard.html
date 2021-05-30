@@ -202,94 +202,27 @@
 
               <div class="search-form">
                 <ul>
-                  <span id=search-form-left>
-                    <li class="search-list" style="padding-left: 2%;"><input type="datetime-local" name="writeTime"
-                        id=""></li>
-                    <li class="search-list"><input type="datetime-local" name="deadline" id=""></li>
-                  </span>
-
-                  <span id=search-form-right style="padding-left: 28%;">
-                    <li class="search-list">
-                      <select name="row">
-                        <option>10</option>
-                        <option>9</option>
-                        <option>8</option>
-                        <option>7</option>
-                        <option>6</option>
-                        <option>5</option>
-                        <option>4</option>
-                        <option>3</option>
-                        <option>2</option>
-                        <option>1</option>
-                      </select>
-                    </li>
-                    <li class="search-list">
-                      <select name="row">
-                        <option value a="A"> 제목+내용 </option>
-                        <option value a="T"> 제목 </option>
-                        <option value a="C"> 내용 </option>
-                        <option value a="N"> 주최자 </option>
-                      </select>
-                    </li>
-                    <li class="search-list"><input type="text" name="searchkeyword" value="검색 내용"></li>
-                    <li class="search-list"><input type="submit" value="검색"></li>
-                  </span>
+                  <form action="" id ="search-form">
+                    <span id=search-form-right style="padding-left: 8%;">
+                      <li class="search-list">
+                        <select name="row">
+                          <option value="title"> 제목 </option>
+                          <option value="content"> 내용 </option>
+                          <option value="type"> 종류 </option> <!-- nick -> type 로 수정-->
+                        </select>
+                      </li>
+                      <li class="search-list">
+                        <input type="text" name="searchkeyword" placeholder="검색 내용">
+                      </li>
+                      <li class="search-list">
+                        <input type="button" value="검색" onclick='searchTable(document.getElementById("table_wrap"))'>
+                      </li>
+                    </span>
+                  </form>
                 </ul>
               </div>
 
-              <div>
-                <script>
-                  /*$(document).ready(function (){};*/
-                  const rowCnt = 10;
-                  const columnCnt = 7;
-                  var list_table = new Array(
-                    '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 69.18 67.72">\n' +
-                    '                            <g id="star-fill" transform="translate(-0.003 -1.123)">\n' +
-                    '                                <path id="패스_2" data-name="패스 2" d="M15.615,68.586a2.323,2.323,0,0,1-3.227-2.673l3.588-21.354L.745,29.409a2.544,2.544,0,0,1,1.224-4.288l21.177-3.142L32.589,2.445a2.181,2.181,0,0,1,4.009,0l9.443,19.534,21.177,3.142a2.545,2.545,0,0,1,1.224,4.288L53.209,44.559,56.8,65.913a2.323,2.323,0,0,1-3.227,2.673L34.587,58.4,15.611,68.586Z" transform="translate(0 0)" fill="#7a7575"/>\n' +
-                    '                            </g>\n' +
-                    '                        </svg>', 'C++스터디', '코딩', '강상원', '모집중', '2021.05.15-2021.08.15', 5);
-                  var list_table_2 = new Array(
-                    '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 69.18 67.72">\n' +
-                    '                            <g id="star-fill" transform="translate(-0.003 -1.123)">\n' +
-                    '                                <path id="패스_2" data-name="패스 2" d="M15.615,68.586a2.323,2.323,0,0,1-3.227-2.673l3.588-21.354L.745,29.409a2.544,2.544,0,0,1,1.224-4.288l21.177-3.142L32.589,2.445a2.181,2.181,0,0,1,4.009,0l9.443,19.534,21.177,3.142a2.545,2.545,0,0,1,1.224,4.288L53.209,44.559,56.8,65.913a2.323,2.323,0,0,1-3.227,2.673L34.587,58.4,15.611,68.586Z" transform="translate(0 0)" fill="#f2d025"/>\n' +
-                    '                            </g>\n' +
-                    '                        </svg>', '면접스터디', '취업', '강하연', '모집마감', '2021.03.22-2021.04.31', 8);
-
-
-                  document.write('<table border="2">');
-                  document.write('<th>즐겨찾기</th>');
-                  document.write('<th>제목</th>');
-                  document.write('<th>공모전종류</th>');
-                  document.write('<th>주최자(기관)</th>');
-                  document.write('<th>모집현황</th>');
-                  document.write('<th>모집기간</th>');
-                  document.write('<th>조회수</th>');
-
-                  for (let i = 0; i < rowCnt; i++) {
-                    document.write('<tr>');
-
-                    if (i == 4 || i == 7 || i == 9) {
-                      for (let j = 0; j < columnCnt; j++) {
-                        document.write('<td>');
-                        document.write(list_table_2[j]);
-                        document.write('</td>');
-                      };
-                    } else {
-                      for (let j = 0; j < columnCnt; j++) {
-                        document.write('<td>');
-                        document.write(list_table[j]);
-                        document.write('</td>');
-                      }
-                    }
-                    document.write('</tr>')
-                  }
-                  document.write('</table>');
-
-                  function randomItem(a) {
-                    return a[Math.floor(Math.random() * a.length)];
-                  };
-                </script>
-
+              <div id="table_wrap">
               </div>
 
             </div>
@@ -337,6 +270,35 @@
       </ul>
     </div>
   </footer>
-</body>
 
+  <script src="../../Js/ajaxLogin.js"></script>
+  <script src="../../Js/MakeTable_Contest.js"></script>
+  <script>
+    ajaxLogined();
+    // test data
+    //var list_table = new Array(new Array(star1, 'C++스터디', '코딩', '강상원', '모집중', '2021.05.15-2021.08.15', 5), new Array(star2, '면접스터디', '취업', '강하연', '모집마감', '2021.03.22-2021.04.31', 8));
+
+    $.ajax({
+          url: "../../study_list",
+          type: "POST",
+          //data: $("form").serialize(),
+          success: function (result) {
+            
+            var Wrap = document.getElementById("table_wrap"); /* 여기서 테이블과 연결해주는 느낌 */
+
+            let data = JSON.parse(result); 
+            let datalist = new Array();
+            for(let i =0;i<data.length;i++){
+              console.log(data);
+              datalist.push(makeData(data[i]));
+            }
+            
+            makeTable(Wrap, datalist);
+          }
+    });
+
+    
+  </script>
+
+</body>
 </html>

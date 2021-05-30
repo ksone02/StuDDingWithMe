@@ -129,12 +129,18 @@
           <form>
             <select style="border: 2px solid #babab9; width: 100%; outline-style:none; height:30px;">
               <option selected disabled value="">선택</option>
-              <option value="0">0</option>
-              <option value="1">1</option>
-              <option>0</option>
-              <option>0</option>
-              <option>0</option>
-              <option>0</option>
+              <option value="0">건축/건설</option>
+              <option value="1">게임/소프트웨어</option>
+              <option value="2">과학/공학</option>
+              <option value="3">광고/마케팅</option>
+              <option value="4">기획/아이디어></option>
+              <option value="5">디자인</option>
+              <option value="6">문학/수기</option>
+              <option value="7">사진</option>
+              <option value="8">예체능</option>
+              <option value="9">취업/창업</option>
+              <option value="10">UCC/영상</option>
+              <option value="11">기타</option>
             </select>
           </form>
           <div class="period_input_2">
@@ -173,8 +179,10 @@
         </div>
         <h3> </h3>
         <div class="post_7">
-          <button class="post_button">작성</button>
+            <input type="button" class="post_button" value="작성" onclick="prepareSubmit()">
         </div>
+        <input type="hidden" name = "currentTime">
+        <input type="hidden" name = "id">
       </form>
     </div>
   </main>
@@ -194,6 +202,58 @@
       </ul>
     </div>
   </footer>
+  <script src="../../Js/ajaxLogin.js"></script>
+    <script>
+      ajaxLogined();
+
+      var id = document.getElementsByName("id")[0];
+      var currentTime = document.getElementsByName("currentTime")[0];
+
+      function prepareSubmit(){
+        id.value = User_id; // 임의 고정 해둠 , 추후 쿠키에서 id 값 가져올 것.
+        currentTime.value = getTimeStamp(); // 글 등록 시간을 얻어오기 위함.
+
+        $.ajax({
+          url: "../../study_post",
+          type: "POST",
+          data: $("form").serialize(),
+          success: function (result) {
+            if (result.result == "ok") {
+              alert("게시글이 등록되었습니다.");
+              location.href = "studyBoard.html";
+            } else {
+              alert("게시글이 등록 실패하였습니다");
+            }
+          },
+        });
+      }
+
+      function getTimeStamp() {
+        var d = new Date();
+
+        var s =
+          leadingZeros(d.getFullYear(), 4) + '-' +
+          leadingZeros(d.getMonth() + 1, 2) + '-' +
+          leadingZeros(d.getDate(), 2) + ' ' +
+
+          leadingZeros(d.getHours(), 2) + ':' +
+          leadingZeros(d.getMinutes(), 2) + ':' +
+          leadingZeros(d.getSeconds(), 2);
+
+        return s;
+      }
+
+      function leadingZeros(n, digits) {
+        var zero = '';
+        n = n.toString();
+
+        if (n.length < digits) {
+          for (i = 0; i < digits - n.length; i++)
+            zero += '0';
+        }
+        return zero + n;
+      }
+    </script>
 </body>
 
 </html>

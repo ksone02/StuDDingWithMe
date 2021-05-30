@@ -6,7 +6,7 @@ var User_logined;
 
 function ajaxLogined(){
     $.ajax({
-        url: "http://127.0.0.1:8888/loginCheck",
+        url: "http://localhost:8888/loginCheck",
         type: "POST",
         success: function (result) {
             if(result.logined == true){
@@ -32,7 +32,7 @@ function ajaxLogined(){
 
               register.style.display = "none";
               login.innerHTML = "로그아웃";
-              login.href = "http://127.0.0.1:8888/";
+              login.href = "http://localhost:8888/";
               login.addEventListener("click", logout, false);
             }
         }
@@ -41,7 +41,7 @@ function ajaxLogined(){
 
 function logout(){
     $.ajax({
-        url: "http://127.0.0.1:8888/logout",
+        url: "http://localhost:8888/logout",
         type: "POST",
         success: function (result) {
             if(result.logined == false){

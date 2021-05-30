@@ -38,24 +38,7 @@ function checkPeriod(deadline){
 }
 
 function makeData(data){
-    return new Array(star1,data.title,data.kinds,nicknameAjax(data.id) , checkPeriod(data.deadline),data.time.split('T')[0]+" ~ "+data.deadline.split('T')[0], data.count, ddayCalc(data.deadline));
-}
-
-function ddayCalc(deadline) {
-    let now = new Date();
-    let dday = new Date(deadline);
-    let gap = now.getTime() - dday.getTime();    // 현재 날짜에서 D-day의 차이를 구함
-    let result = Math.floor(gap / (1000 * 60 * 60 * 24)) * -1;    // gap을 일(밀리초 * 초 * 분 * 시간)로 나눔
-
-    if(result == 0) { //날짜가 0일 때 "D-Day" 출력
-        result = "Day";
-        return "D-" + result;
-    } else if(result < 0) { // 날짜가 마감시간이 지났을때 "마감" 출력
-        result = "마감";
-        return result;
-    } else {
-        return "D-" + result;
-    }
+    return new Array(star1,data.title,data.kinds,nicknameAjax(data.id) , checkPeriod(data.deadline),data.time.split('T')[0]+" ~ "+data.deadline.split('T')[0], data.count);
 }
 
 // tavble 생성
@@ -68,7 +51,7 @@ function makeTable(tableWrap, data) {
     // th추가
     table.appendChild(createTH("즐겨찾기"));
     table.appendChild(createTH("제목"));
-    table.appendChild(createTH("스터디종류"));
+    table.appendChild(createTH("공모전종류"));
     table.appendChild(createTH("작성자"));
     table.appendChild(createTH("모집현황"));
     table.appendChild(createTH("모집기간"));
@@ -156,68 +139,3 @@ function getTimeStamp() {
     }
     return zero + n;
   }
-
-function randomImg() {
-  let r = Math.random();
-  let s = Math.floor(r * 3 + 1);
-
-  return "../../Img/study" + s + ".jpg";
-}
-
-//스터디목록 테이블 생성
-function makeTableStudy(tableWrap, data) {
-    let rowCnt = 5;
-
-    if (rowCnt > data.length) {
-        rowCnt = data.length;
-    }
-
-    let table = document.createElement("div");
-    table.className = "study-main-item-list-wrap";
-
-    for(let i = 0; i < rowCnt; i++) {
-
-        let list = document.createElement("div");
-        list.className = "study-main-item-list";
-
-        table.appendChild(list);
-
-        let imgWrap = document.createElement("div");
-        imgWrap.className = "study-item-img-wrap";
-
-        let textWrap = document.createElement("div");
-        textWrap.className = "study-item-txt-wrap";
-
-        list.appendChild(imgWrap);
-        list.appendChild(textWrap);
-
-        let img = document.createElement("img");
-        img.alt = "study-img";
-        img.src = randomImg();
-        img.className = "study-item-img";
-
-        let ddaydiv = document.createElement("div");
-        ddaydiv.className = "study-item-info-cover";
-
-        imgWrap.appendChild(img);
-        imgWrap.appendChild(ddaydiv);
-
-        let dday = document.createElement("h3");
-        dday.className = "study-item-info-day";
-        dday.innerHTML = data[i][7];
-
-        ddaydiv.appendChild(dday);
-
-        let title = document.createElement("h4");
-        title.className = "study-item-txt-title";
-        title.innerHTML = data[i][1];
-
-        let subTitle = document.createElement("p");
-        subTitle.className = "study-item-txt-subTitle";
-        subTitle.innerHTML = data[i][2];
-
-        textWrap.appendChild(title);
-        textWrap.appendChild(subTitle);
-    }
-    tableWrap.appendChild(table);
-}

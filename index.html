@@ -31,7 +31,9 @@
                 <h4 class="logo-subtitle">M.C.C 매칭서비스 프로젝트</h4>
               </div>
             </div>
-            <a href="html/Member/login-form.html" class="logo-login-mobile">로그인</a>
+            <a href="html/Member/login-form.html" class="logo-login-mobile"
+              >로그인</a
+            >
           </div>
           <nav class="nav">
             <ul class="nav-list-wrap">
@@ -155,10 +157,14 @@
         <div class="gnb-wrap">
           <ul class="gnb-list-wrap">
             <li class="gnb-list login">
-              <a href="html/Member/login-form.html" class="gnb-btn-login">로그인</a>
+              <a href="html/Member/login-form.html" class="gnb-btn-login"
+                >로그인</a
+              >
             </li>
             <li class="gnb-list register">
-              <a href="html/Member/register-form.html" class="gnb-btn-register">회원가입</a>
+              <a href="html/Member/register-form.html" class="gnb-btn-register"
+                >회원가입</a
+              >
             </li>
           </ul>
         </div>
@@ -179,7 +185,7 @@
               </div>
             </div>
             <div class="study-main-body">
-              <div class="study-main-item-list-wrap">
+              <!--<div class="study-main-item-list-wrap">
                 <div class="study-main-item-list">
                   <div class="study-item-img-wrap">
                     <img
@@ -342,7 +348,7 @@
                     <p class="study-item-txt-subTitle">비대면</p>
                   </div>
                 </div>
-              </div>
+              </div>-->
             </div>
           </div>
         </section>
@@ -358,7 +364,7 @@
               </div>
             </div>
             <div class="contest-main-body">
-              <ol class="main-item-list-wrap">
+              <!--<ol class="main-item-list-wrap">
                 <li class="main-item-list">
                   <a class="main-item">
                     <div class="main-item-head">
@@ -439,7 +445,7 @@
                     </div>
                   </a>
                 </li>
-              </ol>
+              </ol>-->
             </div>
           </div>
         </section>
@@ -455,7 +461,7 @@
               </div>
             </div>
             <div class="classmate-main-body">
-              <ol class="main-item-list-wrap">
+              <!--<ol class="main-item-list-wrap">
                 <li class="main-item-list">
                   <a class="main-item">
                     <div class="main-item-head">
@@ -528,7 +534,7 @@
                     </div>
                   </a>
                 </li>
-              </ol>
+              </ol>-->
             </div>
           </div>
         </section>
@@ -552,8 +558,63 @@
     </footer>
 
     <script src="./Js/ajaxLogin.js"></script>
+    <script src="./Js/MakeTable_main.js"></script>
     <script>
       ajaxLogined();
+
+      $.ajax({
+        url: "../../study_list",
+        type: "POST",
+        //data: $("form").serialize(),
+        success: function (result) {
+          var Wrap = document.getElementsByClassName("study-main-body")[0];
+
+          let data = JSON.parse(result);
+          let datalist = new Array();
+          for (let i = 0; i < data.length; i++) {
+            console.log(data);
+            datalist.push(makeData(data[i]));
+          }
+
+          makeTableStudy(Wrap, datalist);
+        },
+      });
+
+      $.ajax({
+        url: "../../study_list",
+        type: "POST",
+        //data: $("form").serialize(),
+        success: function (result) {
+          var Wrap = document.getElementsByClassName("contest-main-body")[0];
+
+          let data = JSON.parse(result);
+          let datalist = new Array();
+          for (let i = 0; i < data.length; i++) {
+            console.log(data);
+            datalist.push(makeData(data[i]));
+          }
+
+          makeTable(Wrap, datalist);
+        },
+      });
+
+      $.ajax({
+        url: "../../study_list",
+        type: "POST",
+        //data: $("form").serialize(),
+        success: function (result) {
+          var Wrap = document.getElementsByClassName("classmate-main-body")[0];
+
+          let data = JSON.parse(result);
+          let datalist = new Array();
+          for (let i = 0; i < data.length; i++) {
+            console.log(data);
+            datalist.push(makeData(data[i]));
+          }
+
+          makeTable(Wrap, datalist);
+        },
+      });
     </script>
   </body>
 </html>

@@ -124,14 +124,12 @@
         <div class="study-main-contents">
           <div class="study-main-header">
             <div class="main-header-r">
-              <br />
-              <br />
               <h3 class="main-title">인기 게시물</h3>
               <h5 class="main-subTitle">최근 올라온 인기 스터디입니다.</h5>
             </div>
           </div>
           <div class="study-main-body">
-            <div class="study-main-item-list-wrap">
+            <!--<div class="study-main-item-list-wrap">
               <div class="study-main-item-list">
                 <div class="study-item-img-wrap">
                   <img src="../../Img/study1.jpg" alt="study-img" class="study-item-img" />
@@ -192,7 +190,7 @@
                   <p class="study-item-txt-subTitle">경기도 군포시</p>
                 </div>
               </div>
-            </div>
+            </div>-->
           </div>
         </div>
       </section>
@@ -296,6 +294,7 @@
           success: function (result) {
             
             var Wrap = document.getElementById("table_wrap");
+            var S_Wrap = document.getElementsByClassName("study-main-body")[0];
 
             let data = JSON.parse(result); 
             let datalist = new Array();
@@ -305,6 +304,7 @@
             }
             
             makeTable(Wrap, datalist);
+            makeTableStudy(S_Wrap, datalist);
           }
     });
 
