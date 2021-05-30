@@ -194,6 +194,59 @@
       </ul>
     </div>
   </footer>
+  <script src="../../Js/ajaxLogin.js"></script>
+  
+  <script>
+    ajaxLogined();
+
+    var id = document.getElementsByName("id")[0];
+    var currentTime = document.getElementsByName("currentTime")[0];
+
+    function prepareSubmit(){
+      id.value = User_id; // 임의 고정 해둠 , 추후 쿠키에서 id 값 가져올 것.
+      currentTime.value = getTimeStamp(); // 글 등록 시간을 얻어오기 위함.
+
+      $.ajax({
+        url: "../../study_post",
+        type: "POST",
+        data: $("form").serialize(),
+        success: function (result) {
+          if (result.result == "ok") {
+            alert("게시글이 등록되었습니다.");
+            location.href = "studyBoard.html";
+          } else {
+            alert("게시글이 등록 실패하였습니다");
+          }
+        },
+      });
+    }
+
+    function getTimeStamp() {
+      var d = new Date();
+
+      var s =
+        leadingZeros(d.getFullYear(), 4) + '-' +
+        leadingZeros(d.getMonth() + 1, 2) + '-' +
+        leadingZeros(d.getDate(), 2) + ' ' +
+
+        leadingZeros(d.getHours(), 2) + ':' +
+        leadingZeros(d.getMinutes(), 2) + ':' +
+        leadingZeros(d.getSeconds(), 2);
+
+      return s;
+    }
+
+    function leadingZeros(n, digits) {
+      var zero = '';
+      n = n.toString();
+
+      if (n.length < digits) {
+        for (i = 0; i < digits - n.length; i++)
+          zero += '0';
+      }
+      return zero + n;
+    }
+  </script>
 </body>
 
 </html>
