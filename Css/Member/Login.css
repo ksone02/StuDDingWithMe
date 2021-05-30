@@ -41,7 +41,7 @@ header {
     width: 183px;
     height: 60px;
     display: block;
-    background: url(../Img/logo.png) center/70% no-repeat;
+    background: url(../../Img/logo.png) center/70% no-repeat;
 }
 
 input {
